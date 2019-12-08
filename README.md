@@ -1,1 +1,2 @@
-# BDMS_Project
+# DBMS
+ QuanLyBanHang
