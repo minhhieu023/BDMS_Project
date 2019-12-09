@@ -142,6 +142,18 @@ namespace QuanLyBanHang
             else
                 KhachHangUC.Instance.BringToFront();
         }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            if (!panel.Controls.Contains(KhachHangUC.Instance))
+            {
+                panel.Controls.Add(KhachHangUC.Instance);
+                KhachHangUC.Instance.Dock = DockStyle.Fill;
+                KhachHangUC.Instance.BringToFront();
+            }
+            else
+                KhachHangUC.Instance.BringToFront();
+        }
     }
 
 }

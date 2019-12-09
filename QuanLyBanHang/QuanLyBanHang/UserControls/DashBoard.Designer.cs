@@ -52,10 +52,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lbCart = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,7 +67,6 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -309,7 +308,6 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lbCart);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.txtGiamGia);
             this.groupBox2.Controls.Add(this.ptbCart);
             this.groupBox2.Controls.Add(this.label8);
@@ -326,6 +324,13 @@
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thanh Toán";
+            // 
+            // txtTenKhachHang
+            // 
+            this.txtTenKhachHang.Location = new System.Drawing.Point(318, 164);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(216, 26);
+            this.txtTenKhachHang.TabIndex = 36;
             // 
             // button5
             // 
@@ -358,17 +363,6 @@
             this.lbCart.Size = new System.Drawing.Size(45, 46);
             this.lbCart.TabIndex = 33;
             this.lbCart.Text = "0";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(621, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 66);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Đăng Ký Khách Hàng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtGiamGia
             // 
@@ -474,13 +468,6 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "DASHBOARD";
             // 
-            // txtTenKhachHang
-            // 
-            this.txtTenKhachHang.Location = new System.Drawing.Point(318, 164);
-            this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(216, 26);
-            this.txtTenKhachHang.TabIndex = 36;
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,7 +523,6 @@
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbCart;
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.Label lbTongTien;

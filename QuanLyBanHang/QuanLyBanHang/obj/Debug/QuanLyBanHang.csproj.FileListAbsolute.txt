@@ -257,32 +257,3 @@ D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.Nh
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmLogIn.resources
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.HoaDonUC.resources
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.TimKhachHang.resources
-D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DangKy.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Bill.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DangKy.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmLogIn.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.TimKhachHang.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.HoaDonUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.NhanVienUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ChiNhanhUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DanhMucUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DashBoard.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.Login.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
-D:\Tài Liệu Học Tập\Năm 3\Web\BDMS_Project\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
