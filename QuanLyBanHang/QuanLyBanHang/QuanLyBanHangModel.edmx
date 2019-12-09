@@ -92,6 +92,28 @@
           <Property Name="DanhMucID" Type="nchar" MaxLength="10" />
           <Property Name="HinhAnh" Type="image" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyBanHang.dbo.SanPhamStored' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SanPhamStored">
+          <Key>
+            <PropertyRef Name="SanPhamID" />
+          </Key>
+          <Property Name="SanPhamID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="DonGia" Type="int" />
+          <Property Name="ChiTiet" Type="nchar" MaxLength="10" />
+          <Property Name="TenSP" Type="nchar" MaxLength="10" />
+          <Property Name="NhanHieuID" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="TemptSP">
           <Key>
             <PropertyRef Name="ID" />
@@ -120,6 +142,21 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <Property Name="Tên Danh Mục" Type="nvarchar" MaxLength="50" />
           <Property Name="Tên Nhãn Hiệu" Type="nchar" MaxLength="10" />
           <Property Name="Hình Ảnh" Type="image" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_HoaDon">
+          <Key>
+            <PropertyRef Name="HoaDonID" />
+            <PropertyRef Name="KhachHangID" />
+          </Key>
+          <Property Name="HoaDonID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenNV" Type="nchar" MaxLength="10" />
+          <Property Name="KhachHangID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Ten" Type="nchar" MaxLength="10" />
+          <Property Name="Sdt" Type="nchar" MaxLength="10" />
+          <Property Name="NgayBan" Type="datetime" />
+          <Property Name="TongTien" Type="int" />
         </EntityType>
         <Association Name="FK_ChiTietHoaDon_HoaDon1">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -267,6 +304,22 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
         </Function>
         <Function Name="DeleteTempSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="function_timTenKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sdt" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="HoaDonID" Type="nchar" MaxLength="10" Nullable="false" />
+                <Property Name="TenNV" Type="nchar" MaxLength="10" />
+                <Property Name="KhachHangID" Type="nchar" MaxLength="10" Nullable="false" />
+                <Property Name="Ten" Type="nchar" MaxLength="10" />
+                <Property Name="Sdt" Type="nchar" MaxLength="10" />
+                <Property Name="NgayBan" Type="datetime" />
+                <Property Name="TongTien" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="Function_ToTalPay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
           <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
         </Function>
@@ -355,6 +408,7 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
         <Function Name="SelectChiTietHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SelectKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SelectNhanHieu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NhanHieuID" Type="nchar" Mode="In" />
         </Function>
@@ -396,6 +450,15 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
         </Function>
         <Function Name="TimDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="text" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="TimKHSDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDT" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="TimKHTenKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ten" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="TimKiemSDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sdt" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="TimNhanHieu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="text" Type="nvarchar" Mode="In" />
@@ -474,7 +537,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <EntitySet Name="NhanHieu" EntityType="Self.NhanHieu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TemptSP" EntityType="Self.TemptSP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPhamStored" EntityType="Self.SanPhamStored" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SanPhamStored].[SanPhamID] AS [SanPhamID], 
+    [SanPhamStored].[DonGia] AS [DonGia], 
+    [SanPhamStored].[ChiTiet] AS [ChiTiet], 
+    [SanPhamStored].[TenSP] AS [TenSP], 
+    [SanPhamStored].[NhanHieuID] AS [NhanHieuID]
+    FROM [dbo].[SanPhamStored] AS [SanPhamStored]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="DASHBOARD" EntityType="Self.DASHBOARD" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [DASHBOARD].[Mã Sản Phẩm] AS [Mã Sản Phẩm], 
@@ -485,6 +558,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
     [DASHBOARD].[Tên Nhãn Hiệu] AS [Tên Nhãn Hiệu], 
     [DASHBOARD].[Hình Ảnh] AS [Hình Ảnh]
     FROM [dbo].[DASHBOARD] AS [DASHBOARD]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_HoaDon" EntityType="Self.View_HoaDon" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_HoaDon].[HoaDonID] AS [HoaDonID], 
+    [View_HoaDon].[TenNV] AS [TenNV], 
+    [View_HoaDon].[KhachHangID] AS [KhachHangID], 
+    [View_HoaDon].[Ten] AS [Ten], 
+    [View_HoaDon].[Sdt] AS [Sdt], 
+    [View_HoaDon].[NgayBan] AS [NgayBan], 
+    [View_HoaDon].[TongTien] AS [TongTien]
+    FROM [dbo].[View_HoaDon] AS [View_HoaDon]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_ChiTietHoaDon_HoaDon1" Association="Self.FK_ChiTietHoaDon_HoaDon1">
             <End Role="HoaDon" EntitySet="HoaDon" />
@@ -532,6 +616,15 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="function_timTenKH_Result">
+          <Property Name="HoaDonID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="KhachHangID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NgayBan" Type="DateTime" />
+          <Property Name="TongTien" Type="Int32" />
+        </ComplexType>
         <ComplexType Name="View_tb_HoaDon_Result">
           <Property Name="Sản_Phẩm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Số_Lượng" Type="Int32" />
@@ -634,6 +727,16 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <NavigationProperty Name="DanhMuc" Relationship="Self.FK_SanPham_DanhMuc1" FromRole="SanPham" ToRole="DanhMuc" />
           <NavigationProperty Name="NhanHieu" Relationship="Self.FK_SanPham_NhanHieu" FromRole="SanPham" ToRole="NhanHieu" />
         </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TemptSP">
           <Key>
             <PropertyRef Name="ID" />
@@ -642,6 +745,16 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Soluong" Type="Int32" />
           <Property Name="DonGia" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SanPhamStored">
+          <Key>
+            <PropertyRef Name="SanPhamID" />
+          </Key>
+          <Property Name="SanPhamID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DonGia" Type="Int32" />
+          <Property Name="ChiTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NhanHieuID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="DASHBOARD">
           <Key>
@@ -654,6 +767,19 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <Property Name="Tên_Danh_Mục" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tên_Nhãn_Hiệu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Hình_Ảnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="View_HoaDon">
+          <Key>
+            <PropertyRef Name="HoaDonID" />
+            <PropertyRef Name="KhachHangID" />
+          </Key>
+          <Property Name="HoaDonID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="KhachHangID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NgayBan" Type="DateTime" Precision="3" />
+          <Property Name="TongTien" Type="Int32" />
         </EntityType>
         <Association Name="FK_Employee_ChiNhanh1">
           <End Role="ChiNhanh" Type="Self.ChiNhanh" Multiplicity="0..1" />
@@ -764,8 +890,11 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <EntitySet Name="NhanHieux" EntityType="Self.NhanHieu" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TemptSPs" EntityType="Self.TemptSP" />
+          <EntitySet Name="SanPhamStoreds" EntityType="Self.SanPhamStored" />
           <EntitySet Name="DASHBOARDs" EntityType="Self.DASHBOARD" />
+          <EntitySet Name="View_HoaDon" EntityType="Self.View_HoaDon" />
           <AssociationSet Name="FK_Employee_ChiNhanh1" Association="Self.FK_Employee_ChiNhanh1">
             <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
             <End Role="NhanVien" EntitySet="NhanViens" />
@@ -802,6 +931,9 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
             <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
             <End Role="DanhMuc" EntitySet="DanhMucs" />
           </AssociationSet>
+          <FunctionImport Name="function_timTenKH" IsComposable="true" ReturnType="Collection(QuanLyBanHangModel.function_timTenKH_Result)">
+            <Parameter Name="sdt" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="View_tb_HoaDon" IsComposable="true" ReturnType="Collection(QuanLyBanHangModel.View_tb_HoaDon_Result)">
             <Parameter Name="HoaDonID" Mode="In" Type="String" />
           </FunctionImport>
@@ -905,6 +1037,7 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <FunctionImport Name="SelectChiTietHoaDon" ReturnType="Collection(QuanLyBanHangModel.SelectChiTietHoaDon_Result)" />
           <FunctionImport Name="SelectDanhMuc" ReturnType="Collection(QuanLyBanHangModel.SelectDanhMuc_Result)" />
           <FunctionImport Name="SelectHoaDon" ReturnType="Collection(QuanLyBanHangModel.SelectHoaDon_Result)" />
+          <FunctionImport Name="SelectKhachHang" ReturnType="Collection(QuanLyBanHangModel.SelectKhachHang_Result)" />
           <FunctionImport Name="SelectNhanHieu" ReturnType="Collection(QuanLyBanHangModel.SelectNhanHieu_Result)">
             <Parameter Name="NhanHieuID" Mode="In" Type="String" />
           </FunctionImport>
@@ -946,6 +1079,15 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           </FunctionImport>
           <FunctionImport Name="TimDanhMuc" ReturnType="Collection(QuanLyBanHangModel.TimDanhMuc_Result)">
             <Parameter Name="text" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TimKHSDT" ReturnType="Collection(QuanLyBanHangModel.TimKHSDT_Result)">
+            <Parameter Name="SDT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TimKHTenKH" ReturnType="Collection(QuanLyBanHangModel.TimKHTenKH_Result)">
+            <Parameter Name="Ten" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TimKiemSDT" ReturnType="Collection(QuanLyBanHangModel.TimKiemSDT_Result)">
+            <Parameter Name="sdt" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="TimNhanHieu" ReturnType="Collection(QuanLyBanHangModel.TimNhanHieu_Result)">
             <Parameter Name="text" Mode="In" Type="String" />
@@ -1030,6 +1172,12 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
           <Property Type="DateTime" Name="NgayBan" Nullable="true" Precision="23" />
           <Property Type="Int32" Name="TongTien" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="SelectKhachHang_Result">
+          <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="HovaLot" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+        </ComplexType>
         <ComplexType Name="SelectNhanHieu_Result">
           <Property Type="String" Name="NhanHieuID" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="TenNhanHieu" Nullable="true" MaxLength="10" />
@@ -1079,6 +1227,23 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
         <ComplexType Name="TimDanhMuc_Result">
           <Property Type="String" Name="DanhMucID" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="TenDanhMuc" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="TimKHSDT_Result">
+          <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="TimKHTenKH_Result">
+          <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="TimKiemSDT_Result">
+          <Property Type="String" Name="HoaDonID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="TenNV" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NgayBan" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="TongTien" Nullable="true" />
         </ComplexType>
         <ComplexType Name="TimNhanHieu_Result">
           <Property Type="String" Name="NhanHieuID" Nullable="false" MaxLength="10" />
@@ -1194,6 +1359,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TemptSPs">
             <EntityTypeMapping TypeName="QuanLyBanHangModel.TemptSP">
               <MappingFragment StoreEntitySet="TemptSP">
@@ -1201,6 +1377,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
                 <ScalarProperty Name="Ten" ColumnName="Ten" />
                 <ScalarProperty Name="Soluong" ColumnName="Soluong" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhamStoreds">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.SanPhamStored">
+              <MappingFragment StoreEntitySet="SanPhamStored">
+                <ScalarProperty Name="SanPhamID" ColumnName="SanPhamID" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="ChiTiet" ColumnName="ChiTiet" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="NhanHieuID" ColumnName="NhanHieuID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1217,6 +1404,19 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="View_HoaDon">
+            <EntityTypeMapping TypeName="QuanLyBanHangModel.View_HoaDon">
+              <MappingFragment StoreEntitySet="View_HoaDon">
+                <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <AssociationSetMapping Name="DanhMuc_ChiNhanh" TypeName="QuanLyBanHangModel.DanhMuc_ChiNhanh" StoreEntitySet="DanhMuc_ChiNhanh">
             <EndProperty Name="ChiNhanh">
               <ScalarProperty Name="ChiNhanhID" ColumnName="ChiNhanhID" />
@@ -1225,6 +1425,19 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
               <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionName="QuanLyBanHangModel.Store.function_timTenKH" FunctionImportName="function_timTenKH">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.function_timTenKH_Result">
+                <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionName="QuanLyBanHangModel.Store.View_tb_HoaDon" FunctionImportName="View_tb_HoaDon">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyBanHangModel.View_tb_HoaDon_Result">
@@ -1302,6 +1515,16 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectKhachHang" FunctionName="QuanLyBanHangModel.Store.SelectKhachHang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.SelectKhachHang_Result">
+                <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+                <ScalarProperty Name="HovaLot" ColumnName="HovaLot" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1389,6 +1612,35 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
               <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimDanhMuc_Result">
                 <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
                 <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TimKHSDT" FunctionName="QuanLyBanHangModel.Store.TimKHSDT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHSDT_Result">
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TimKHTenKH" FunctionName="QuanLyBanHangModel.Store.TimKHTenKH">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHTenKH_Result">
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TimKiemSDT" FunctionName="QuanLyBanHangModel.Store.TimKiemSDT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKiemSDT_Result">
+                <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

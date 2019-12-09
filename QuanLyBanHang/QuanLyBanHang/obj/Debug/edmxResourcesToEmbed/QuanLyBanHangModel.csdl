@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="function_timTenKH_Result">
+    <Property Name="HoaDonID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KhachHangID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NgayBan" Type="DateTime" />
+    <Property Name="TongTien" Type="Int32" />
+  </ComplexType>
   <ComplexType Name="View_tb_HoaDon_Result">
     <Property Name="Sản_Phẩm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Số_Lượng" Type="Int32" />
@@ -102,6 +111,16 @@
     <NavigationProperty Name="DanhMuc" Relationship="Self.FK_SanPham_DanhMuc1" FromRole="SanPham" ToRole="DanhMuc" />
     <NavigationProperty Name="NhanHieu" Relationship="Self.FK_SanPham_NhanHieu" FromRole="SanPham" ToRole="NhanHieu" />
   </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="TemptSP">
     <Key>
       <PropertyRef Name="ID" />
@@ -110,6 +129,16 @@
     <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Soluong" Type="Int32" />
     <Property Name="DonGia" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SanPhamStored">
+    <Key>
+      <PropertyRef Name="SanPhamID" />
+    </Key>
+    <Property Name="SanPhamID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DonGia" Type="Int32" />
+    <Property Name="ChiTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NhanHieuID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="DASHBOARD">
     <Key>
@@ -122,6 +151,19 @@
     <Property Name="Tên_Danh_Mục" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Tên_Nhãn_Hiệu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Hình_Ảnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="View_HoaDon">
+    <Key>
+      <PropertyRef Name="HoaDonID" />
+      <PropertyRef Name="KhachHangID" />
+    </Key>
+    <Property Name="HoaDonID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KhachHangID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NgayBan" Type="DateTime" Precision="3" />
+    <Property Name="TongTien" Type="Int32" />
   </EntityType>
   <Association Name="FK_Employee_ChiNhanh1">
     <End Role="ChiNhanh" Type="Self.ChiNhanh" Multiplicity="0..1" />
@@ -232,8 +274,11 @@
     <EntitySet Name="NhanHieux" EntityType="Self.NhanHieu" />
     <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TemptSPs" EntityType="Self.TemptSP" />
+    <EntitySet Name="SanPhamStoreds" EntityType="Self.SanPhamStored" />
     <EntitySet Name="DASHBOARDs" EntityType="Self.DASHBOARD" />
+    <EntitySet Name="View_HoaDon" EntityType="Self.View_HoaDon" />
     <AssociationSet Name="FK_Employee_ChiNhanh1" Association="Self.FK_Employee_ChiNhanh1">
       <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
       <End Role="NhanVien" EntitySet="NhanViens" />
@@ -270,6 +315,9 @@
       <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
       <End Role="DanhMuc" EntitySet="DanhMucs" />
     </AssociationSet>
+    <FunctionImport Name="function_timTenKH" IsComposable="true" ReturnType="Collection(QuanLyBanHangModel.function_timTenKH_Result)">
+      <Parameter Name="sdt" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="View_tb_HoaDon" IsComposable="true" ReturnType="Collection(QuanLyBanHangModel.View_tb_HoaDon_Result)">
       <Parameter Name="HoaDonID" Mode="In" Type="String" />
     </FunctionImport>
@@ -372,6 +420,8 @@
     <FunctionImport Name="SelectChiNhanh" ReturnType="Collection(QuanLyBanHangModel.SelectChiNhanh_Result)" />
     <FunctionImport Name="SelectChiTietHoaDon" ReturnType="Collection(QuanLyBanHangModel.SelectChiTietHoaDon_Result)" />
     <FunctionImport Name="SelectDanhMuc" ReturnType="Collection(QuanLyBanHangModel.SelectDanhMuc_Result)" />
+    <FunctionImport Name="SelectHoaDon" ReturnType="Collection(QuanLyBanHangModel.SelectHoaDon_Result)" />
+    <FunctionImport Name="SelectKhachHang" ReturnType="Collection(QuanLyBanHangModel.SelectKhachHang_Result)" />
     <FunctionImport Name="SelectNhanHieu" ReturnType="Collection(QuanLyBanHangModel.SelectNhanHieu_Result)">
       <Parameter Name="NhanHieuID" Mode="In" Type="String" />
     </FunctionImport>
@@ -413,6 +463,15 @@
     </FunctionImport>
     <FunctionImport Name="TimDanhMuc" ReturnType="Collection(QuanLyBanHangModel.TimDanhMuc_Result)">
       <Parameter Name="text" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TimKHSDT" ReturnType="Collection(QuanLyBanHangModel.TimKHSDT_Result)">
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TimKHTenKH" ReturnType="Collection(QuanLyBanHangModel.TimKHTenKH_Result)">
+      <Parameter Name="Ten" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TimKiemSDT" ReturnType="Collection(QuanLyBanHangModel.TimKiemSDT_Result)">
+      <Parameter Name="sdt" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="TimNhanHieu" ReturnType="Collection(QuanLyBanHangModel.TimNhanHieu_Result)">
       <Parameter Name="text" Mode="In" Type="String" />
@@ -490,6 +549,19 @@
     <Property Type="String" Name="DanhMucID" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="TenDanhMuc" Nullable="true" MaxLength="50" />
   </ComplexType>
+  <ComplexType Name="SelectHoaDon_Result">
+    <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="HoaDonID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="MaNV" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="NgayBan" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TongTien" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectKhachHang_Result">
+    <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="HovaLot" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+  </ComplexType>
   <ComplexType Name="SelectNhanHieu_Result">
     <Property Type="String" Name="NhanHieuID" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="TenNhanHieu" Nullable="true" MaxLength="10" />
@@ -539,6 +611,23 @@
   <ComplexType Name="TimDanhMuc_Result">
     <Property Type="String" Name="DanhMucID" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="TenDanhMuc" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="TimKHSDT_Result">
+    <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="TimKHTenKH_Result">
+    <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="TimKiemSDT_Result">
+    <Property Type="String" Name="HoaDonID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TenNV" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="NgayBan" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TongTien" Nullable="true" />
   </ComplexType>
   <ComplexType Name="TimNhanHieu_Result">
     <Property Type="String" Name="NhanHieuID" Nullable="false" MaxLength="10" />

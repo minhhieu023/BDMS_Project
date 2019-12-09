@@ -87,6 +87,28 @@
     <Property Name="DanhMucID" Type="nchar" MaxLength="10" />
     <Property Name="HinhAnh" Type="image" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyBanHang.dbo.SanPhamStored' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SanPhamStored">
+    <Key>
+      <PropertyRef Name="SanPhamID" />
+    </Key>
+    <Property Name="SanPhamID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DonGia" Type="int" />
+    <Property Name="ChiTiet" Type="nchar" MaxLength="10" />
+    <Property Name="TenSP" Type="nchar" MaxLength="10" />
+    <Property Name="NhanHieuID" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TemptSP">
     <Key>
       <PropertyRef Name="ID" />
@@ -115,6 +137,21 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
     <Property Name="Tên Danh Mục" Type="nvarchar" MaxLength="50" />
     <Property Name="Tên Nhãn Hiệu" Type="nchar" MaxLength="10" />
     <Property Name="Hình Ảnh" Type="image" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_HoaDon">
+    <Key>
+      <PropertyRef Name="HoaDonID" />
+      <PropertyRef Name="KhachHangID" />
+    </Key>
+    <Property Name="HoaDonID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNV" Type="nchar" MaxLength="10" />
+    <Property Name="KhachHangID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ten" Type="nchar" MaxLength="10" />
+    <Property Name="Sdt" Type="nchar" MaxLength="10" />
+    <Property Name="NgayBan" Type="datetime" />
+    <Property Name="TongTien" Type="int" />
   </EntityType>
   <Association Name="FK_ChiTietHoaDon_HoaDon1">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -262,6 +299,22 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
   </Function>
   <Function Name="DeleteTempSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="function_timTenKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sdt" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="HoaDonID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenNV" Type="nchar" MaxLength="10" />
+          <Property Name="KhachHangID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Ten" Type="nchar" MaxLength="10" />
+          <Property Name="Sdt" Type="nchar" MaxLength="10" />
+          <Property Name="NgayBan" Type="datetime" />
+          <Property Name="TongTien" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
   <Function Name="Function_ToTalPay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
     <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
   </Function>
@@ -349,6 +402,8 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
   <Function Name="SelectChiNhanh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectChiTietHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectNhanHieu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="NhanHieuID" Type="nchar" Mode="In" />
   </Function>
@@ -390,6 +445,15 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
   </Function>
   <Function Name="TimDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="text" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TimKHSDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDT" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TimKHTenKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ten" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TimKiemSDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sdt" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="TimNhanHieu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="text" Type="nvarchar" Mode="In" />
@@ -468,7 +532,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
     <EntitySet Name="NhanHieu" EntityType="Self.NhanHieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TemptSP" EntityType="Self.TemptSP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPhamStored" EntityType="Self.SanPhamStored" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SanPhamStored].[SanPhamID] AS [SanPhamID], 
+    [SanPhamStored].[DonGia] AS [DonGia], 
+    [SanPhamStored].[ChiTiet] AS [ChiTiet], 
+    [SanPhamStored].[TenSP] AS [TenSP], 
+    [SanPhamStored].[NhanHieuID] AS [NhanHieuID]
+    FROM [dbo].[SanPhamStored] AS [SanPhamStored]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="DASHBOARD" EntityType="Self.DASHBOARD" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [DASHBOARD].[Mã Sản Phẩm] AS [Mã Sản Phẩm], 
@@ -479,6 +553,17 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a prima
     [DASHBOARD].[Tên Nhãn Hiệu] AS [Tên Nhãn Hiệu], 
     [DASHBOARD].[Hình Ảnh] AS [Hình Ảnh]
     FROM [dbo].[DASHBOARD] AS [DASHBOARD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_HoaDon" EntityType="Self.View_HoaDon" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_HoaDon].[HoaDonID] AS [HoaDonID], 
+    [View_HoaDon].[TenNV] AS [TenNV], 
+    [View_HoaDon].[KhachHangID] AS [KhachHangID], 
+    [View_HoaDon].[Ten] AS [Ten], 
+    [View_HoaDon].[Sdt] AS [Sdt], 
+    [View_HoaDon].[NgayBan] AS [NgayBan], 
+    [View_HoaDon].[TongTien] AS [TongTien]
+    FROM [dbo].[View_HoaDon] AS [View_HoaDon]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_ChiTietHoaDon_HoaDon1" Association="Self.FK_ChiTietHoaDon_HoaDon1">
       <End Role="HoaDon" EntitySet="HoaDon" />

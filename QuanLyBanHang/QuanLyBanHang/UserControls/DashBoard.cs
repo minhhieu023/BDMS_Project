@@ -60,6 +60,7 @@ namespace QuanLyBanHang.UserControls
             tamtinh = 0;
             txtMaNV.Text = Const.maNhanVien;
             lbTenNhanVien.Text = Const.tenNhanVien;
+            lbCart.ResetText();
             lbTongTien.ResetText();
             context.DeleteTempSP();
             dgvLog.DataSource = context.SelectTemptSP();
@@ -157,6 +158,12 @@ namespace QuanLyBanHang.UserControls
         {
             LoadData();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TimKhachHang timKhachHang = new TimKhachHang();
+            timKhachHang.ShowDialog();
         }
     }
 }

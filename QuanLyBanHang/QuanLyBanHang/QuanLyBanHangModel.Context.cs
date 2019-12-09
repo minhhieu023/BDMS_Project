@@ -35,8 +35,21 @@ namespace QuanLyBanHang
         public virtual DbSet<NhanHieu> NhanHieux { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TemptSP> TemptSPs { get; set; }
+        public virtual DbSet<SanPhamStored> SanPhamStoreds { get; set; }
         public virtual DbSet<DASHBOARD> DASHBOARDs { get; set; }
+        public virtual DbSet<View_HoaDon> View_HoaDon { get; set; }
+    
+        [DbFunction("QuanLyBanHangEntities", "function_timTenKH")]
+        public virtual IQueryable<function_timTenKH_Result> function_timTenKH(string sdt)
+        {
+            var sdtParameter = sdt != null ?
+                new ObjectParameter("sdt", sdt) :
+                new ObjectParameter("sdt", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<function_timTenKH_Result>("[QuanLyBanHangEntities].[function_timTenKH](@sdt)", sdtParameter);
+        }
     
         [DbFunction("QuanLyBanHangEntities", "View_tb_HoaDon")]
         public virtual IQueryable<View_tb_HoaDon_Result> View_tb_HoaDon(string hoaDonID)
@@ -402,6 +415,11 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectHoaDon_Result>("SelectHoaDon");
         }
     
+        public virtual ObjectResult<SelectKhachHang_Result> SelectKhachHang()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectKhachHang_Result>("SelectKhachHang");
+        }
+    
         public virtual ObjectResult<SelectNhanHieu_Result> SelectNhanHieu(string nhanHieuID)
         {
             var nhanHieuIDParameter = nhanHieuID != null ?
@@ -545,6 +563,33 @@ namespace QuanLyBanHang
                 new ObjectParameter("text", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TimDanhMuc_Result>("TimDanhMuc", textParameter);
+        }
+    
+        public virtual ObjectResult<TimKHSDT_Result> TimKHSDT(string sDT)
+        {
+            var sDTParameter = sDT != null ?
+                new ObjectParameter("SDT", sDT) :
+                new ObjectParameter("SDT", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TimKHSDT_Result>("TimKHSDT", sDTParameter);
+        }
+    
+        public virtual ObjectResult<TimKHTenKH_Result> TimKHTenKH(string ten)
+        {
+            var tenParameter = ten != null ?
+                new ObjectParameter("Ten", ten) :
+                new ObjectParameter("Ten", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TimKHTenKH_Result>("TimKHTenKH", tenParameter);
+        }
+    
+        public virtual ObjectResult<TimKiemSDT_Result> TimKiemSDT(string sdt)
+        {
+            var sdtParameter = sdt != null ?
+                new ObjectParameter("sdt", sdt) :
+                new ObjectParameter("sdt", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TimKiemSDT_Result>("TimKiemSDT", sdtParameter);
         }
     
         public virtual ObjectResult<TimNhanHieu_Result> TimNhanHieu(string text)

@@ -21,6 +21,7 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
           //  SeedData.InsertDanhMUc();
+          ///SeedData.InsertDanhMUc();
             
         }
         private void btnLogin_Click(object sender, EventArgs e)

@@ -128,7 +128,7 @@ namespace QuanLyBanHang
             dgvChiNhanh.DataSource = findCN;
             if (txtTimKiem.Text == "")
             {
-                dgvChiNhanh.DataSource = context.SelectDanhMuc();
+                dgvChiNhanh.DataSource = context.SelectChiNhanh();
             }
         }
     }

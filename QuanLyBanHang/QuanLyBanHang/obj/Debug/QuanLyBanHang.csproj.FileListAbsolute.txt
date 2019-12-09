@@ -256,3 +256,4 @@ D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.Lo
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.NhanVienUC.resources
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmLogIn.resources
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.HoaDonUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.TimKhachHang.resources

@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNhanHieu = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanHieu)).BeginInit();
             this.SuspendLayout();
@@ -62,9 +63,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(497, 140);
+            this.groupBox1.Location = new System.Drawing.Point(503, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(566, 300);
+            this.groupBox1.Size = new System.Drawing.Size(566, 349);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -214,18 +215,30 @@
             this.dgvNhanHieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvNhanHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanHieu.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvNhanHieu.Location = new System.Drawing.Point(497, 446);
+            this.dgvNhanHieu.Location = new System.Drawing.Point(503, 382);
             this.dgvNhanHieu.Name = "dgvNhanHieu";
             this.dgvNhanHieu.RowHeadersWidth = 51;
-            this.dgvNhanHieu.Size = new System.Drawing.Size(566, 395);
+            this.dgvNhanHieu.Size = new System.Drawing.Size(566, 444);
             this.dgvNhanHieu.TabIndex = 3;
             this.dgvNhanHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanHieu_CellClick);
             this.dgvNhanHieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanHieu_CellContentClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(588, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(386, 73);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "CHI NHÁNH";
             // 
             // NhanHieuUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvNhanHieu);
             this.Controls.Add(this.groupBox1);
             this.Name = "NhanHieuUC";
@@ -235,6 +248,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanHieu)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -254,5 +268,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvNhanHieu;
+        private System.Windows.Forms.Label label3;
     }
 }

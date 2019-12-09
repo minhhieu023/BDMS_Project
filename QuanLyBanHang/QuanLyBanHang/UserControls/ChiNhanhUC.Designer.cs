@@ -228,9 +228,9 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(598, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(386, 73);
+            this.label3.Size = new System.Drawing.Size(383, 73);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CHI NHÁNH";
+            this.label3.Text = "NHÃN HIỆU";
             // 
             // ChiNhanhUC
             // 

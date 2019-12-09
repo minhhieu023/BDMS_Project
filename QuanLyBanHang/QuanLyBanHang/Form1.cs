@@ -121,14 +121,26 @@ namespace QuanLyBanHang
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if (!panel.Controls.Contains(NhanHieuUC.Instance))
+            if (!panel.Controls.Contains(HoaDonUC.Instance))
             {
-                panel.Controls.Add(NhanVienUC.Instance);
-                NhanVienUC.Instance.Dock = DockStyle.Fill;
-                NhanVienUC.Instance.BringToFront();
+                panel.Controls.Add(HoaDonUC.Instance);
+                HoaDonUC.Instance.Dock = DockStyle.Fill;
+                HoaDonUC.Instance.BringToFront();
             }
             else
-                NhanVienUC.Instance.BringToFront();
+                HoaDonUC.Instance.BringToFront();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!panel.Controls.Contains(KhachHangUC.Instance))
+            {
+                panel.Controls.Add(KhachHangUC.Instance);
+                KhachHangUC.Instance.Dock = DockStyle.Fill;
+                KhachHangUC.Instance.BringToFront();
+            }
+            else
+                KhachHangUC.Instance.BringToFront();
         }
     }
 

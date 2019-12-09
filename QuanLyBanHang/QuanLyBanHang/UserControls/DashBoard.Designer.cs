@@ -66,6 +66,7 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -302,6 +303,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lbCart);
             this.groupBox2.Controls.Add(this.button2);
@@ -457,6 +459,16 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "DASHBOARD";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(540, 172);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(51, 39);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Tìm";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,5 +535,6 @@
         private System.Windows.Forms.ComboBox cbbNhanHieu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button4;
     }
 }

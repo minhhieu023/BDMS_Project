@@ -87,6 +87,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TemptSPs">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.TemptSP">
         <MappingFragment StoreEntitySet="TemptSP">
@@ -94,6 +105,17 @@
           <ScalarProperty Name="Ten" ColumnName="Ten" />
           <ScalarProperty Name="Soluong" ColumnName="Soluong" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPhamStoreds">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.SanPhamStored">
+        <MappingFragment StoreEntitySet="SanPhamStored">
+          <ScalarProperty Name="SanPhamID" ColumnName="SanPhamID" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="ChiTiet" ColumnName="ChiTiet" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="NhanHieuID" ColumnName="NhanHieuID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -110,6 +132,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="View_HoaDon">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.View_HoaDon">
+        <MappingFragment StoreEntitySet="View_HoaDon">
+          <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="DanhMuc_ChiNhanh" TypeName="QuanLyBanHangModel.DanhMuc_ChiNhanh" StoreEntitySet="DanhMuc_ChiNhanh">
       <EndProperty Name="ChiNhanh">
         <ScalarProperty Name="ChiNhanhID" ColumnName="ChiNhanhID" />
@@ -118,6 +153,19 @@
         <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionName="QuanLyBanHangModel.Store.function_timTenKH" FunctionImportName="function_timTenKH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.function_timTenKH_Result">
+          <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionName="QuanLyBanHangModel.Store.View_tb_HoaDon" FunctionImportName="View_tb_HoaDon">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyBanHangModel.View_tb_HoaDon_Result">
@@ -184,6 +232,27 @@
         <ComplexTypeMapping TypeName="QuanLyBanHangModel.SelectDanhMuc_Result">
           <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
           <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectHoaDon" FunctionName="QuanLyBanHangModel.Store.SelectHoaDon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.SelectHoaDon_Result">
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectKhachHang" FunctionName="QuanLyBanHangModel.Store.SelectKhachHang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.SelectKhachHang_Result">
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="HovaLot" ColumnName="HovaLot" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -271,6 +340,35 @@
         <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimDanhMuc_Result">
           <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
           <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TimKHSDT" FunctionName="QuanLyBanHangModel.Store.TimKHSDT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHSDT_Result">
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TimKHTenKH" FunctionName="QuanLyBanHangModel.Store.TimKHTenKH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHTenKH_Result">
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TimKiemSDT" FunctionName="QuanLyBanHangModel.Store.TimKiemSDT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKiemSDT_Result">
+          <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
