@@ -1,0 +1,260 @@
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Images.v19.1.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraNavBar.v19.1.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Dashboard.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Dashboard.v19.1.Win.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.DataAccess.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.DataAccess.v19.1.UI.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Map.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Office.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.PivotGrid.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.RichEdit.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.TreeMap.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Utils.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Utils.v19.1.UI.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraBars.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraCharts.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraCharts.v19.1.UI.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraCharts.v19.1.Wizard.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraEditors.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraGauges.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraGauges.v19.1.Presets.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraGauges.v19.1.Win.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraGrid.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraLayout.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraMap.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraPivotGrid.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraPrinting.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraReports.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraRichEdit.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraTreeList.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraTreeMap.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraDiagram.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Diagram.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraVerticalGrid.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\DevExpress.XtraNavBar.v19.1.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Dashboard.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Dashboard.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Dashboard.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Dashboard.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Dashboard.v19.1.Win.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Dashboard.v19.1.Win.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Dashboard.v19.1.Win.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Dashboard.v19.1.Win.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.DataAccess.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.DataAccess.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.DataAccess.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.DataAccess.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.DataAccess.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.DataAccess.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.DataAccess.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.DataAccess.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Map.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Map.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Map.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Map.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.PivotGrid.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.PivotGrid.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.PivotGrid.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.PivotGrid.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Utils.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Utils.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Utils.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Utils.v19.1.UI.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraCharts.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraCharts.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraCharts.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraCharts.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraCharts.v19.1.Wizard.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraCharts.v19.1.Wizard.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraCharts.v19.1.Wizard.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraCharts.v19.1.Wizard.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraGauges.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraGauges.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraGauges.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraGauges.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraGauges.v19.1.Presets.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraGauges.v19.1.Presets.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraGauges.v19.1.Presets.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraGauges.v19.1.Presets.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraPivotGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraPivotGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraPivotGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraPivotGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraReports.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraReports.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraReports.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraReports.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraRichEdit.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraRichEdit.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraRichEdit.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraRichEdit.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Diagram.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Diagram.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Diagram.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Diagram.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraVerticalGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraVerticalGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraVerticalGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraVerticalGrid.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\de\DevExpress.XtraNavBar.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\es\DevExpress.XtraNavBar.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ja\DevExpress.XtraNavBar.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\ru\DevExpress.XtraNavBar.v19.1.resources.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Database Management System\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+D:\Tài Liệu Học Tập\Năm 3\Web\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ChiNhanhUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DanhMucUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\sdsdd\OneDrive\Desktop\DBMS 2\DBMS\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ChiNhanhUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DanhMucUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sdsdd\OneDrive\Desktop\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Form1.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ChiNhanhUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DanhMucUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.KhachHangUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.NhanHieuUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Controllers.SanPhamUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Bill.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DashBoard.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.Login.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.NhanVienUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmLogIn.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.HoaDonUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.TimKhachHang.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DangKy.resources
