@@ -346,6 +346,7 @@
     <FunctionImportMapping FunctionImportName="TimKHSDT" FunctionName="QuanLyBanHangModel.Store.TimKHSDT">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHSDT_Result">
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
           <ScalarProperty Name="Ten" ColumnName="Ten" />
           <ScalarProperty Name="Sdt" ColumnName="Sdt" />
         </ComplexTypeMapping>
@@ -354,6 +355,7 @@
     <FunctionImportMapping FunctionImportName="TimKHTenKH" FunctionName="QuanLyBanHangModel.Store.TimKHTenKH">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyBanHangModel.TimKHTenKH_Result">
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
           <ScalarProperty Name="Ten" ColumnName="Ten" />
           <ScalarProperty Name="Sdt" ColumnName="Sdt" />
         </ComplexTypeMapping>

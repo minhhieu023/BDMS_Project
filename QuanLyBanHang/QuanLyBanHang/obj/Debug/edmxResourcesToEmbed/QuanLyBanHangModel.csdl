@@ -613,10 +613,12 @@
     <Property Type="String" Name="TenDanhMuc" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="TimKHSDT_Result">
+    <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
   </ComplexType>
   <ComplexType Name="TimKHTenKH_Result">
+    <Property Type="String" Name="KhachHangID" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="Ten" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="Sdt" Nullable="true" MaxLength="10" />
   </ComplexType>

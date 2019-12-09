@@ -33,12 +33,14 @@
             this.lbTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbbTenKhachHang = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbtotal = new System.Windows.Forms.Label();
+            this.txtKH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,15 +52,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(71, 318);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(522, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(522, 181);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtKH);
             this.groupBox1.Controls.Add(this.lbTime);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cbbTenKhachHang);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtMaNV);
@@ -98,14 +100,6 @@
             this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 25;
             this.label5.Text = "Tên Khách Hàng:";
-            // 
-            // cbbTenKhachHang
-            // 
-            this.cbbTenKhachHang.FormattingEnabled = true;
-            this.cbbTenKhachHang.Location = new System.Drawing.Point(205, 206);
-            this.cbbTenKhachHang.Name = "cbbTenKhachHang";
-            this.cbbTenKhachHang.Size = new System.Drawing.Size(216, 28);
-            this.cbbTenKhachHang.TabIndex = 2;
             // 
             // label4
             // 
@@ -155,19 +149,51 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Nhân Viên:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(153, 520);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 31);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "TOTAL: ";
+            // 
+            // lbtotal
+            // 
+            this.lbtotal.AutoSize = true;
+            this.lbtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtotal.Location = new System.Drawing.Point(273, 511);
+            this.lbtotal.Name = "lbtotal";
+            this.lbtotal.Size = new System.Drawing.Size(172, 42);
+            this.lbtotal.TabIndex = 35;
+            this.lbtotal.Text = "Tạm tính:";
+            // 
+            // txtKH
+            // 
+            this.txtKH.Enabled = false;
+            this.txtKH.Location = new System.Drawing.Point(205, 206);
+            this.txtKH.Name = "txtKH";
+            this.txtKH.Size = new System.Drawing.Size(216, 26);
+            this.txtKH.TabIndex = 28;
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 760);
+            this.ClientSize = new System.Drawing.Size(681, 602);
+            this.Controls.Add(this.lbtotal);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Bill";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,9 +206,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbbTenKhachHang;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbtotal;
+        private System.Windows.Forms.TextBox txtKH;
     }
 }

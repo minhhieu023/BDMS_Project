@@ -120,6 +120,7 @@ namespace QuanLyBanHang.UserControls
                     var Update = context.updateUTempSP(Int32.Parse(txtMaSP.Text));
                     dgvLog.DataSource = context.SelectTemptSP();
                 }
+                if(lbCart.Text != "")
                 lbCart.Text = (Int32.Parse(lbCart.Text) + 1).ToString();
                 tamtinh += Int32.Parse(txtGiaBan.Text);
                 lbTongTien.Text = tamtinh.ToString();
@@ -134,10 +135,10 @@ namespace QuanLyBanHang.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             
-            try
-            {
+            //try
+            //{
                  Const.HoaDonID = RandomString(7);
-                context.InsertHoaDon(cbbTenKhachHang.Text, Const.HoaDonID, txtMaNV.Text, DateTime.Now, Int32.Parse(lbTongTien.Text));
+                context.InsertHoaDon(Const.KhachHangID, Const.HoaDonID, txtMaNV.Text, DateTime.Now, Int32.Parse(lbTongTien.Text));
                 for (int i = 0; i < dgvLog.Rows.Count; i++)
                 {
                     string ThanhTien = context.Database.SqlQuery<int>($"Select dbo.Calculate_TinhTien({Int32.Parse(dgvLog[2, i].Value.ToString())},{Int32.Parse(dgvLog[3, i].Value.ToString())},0)").Single().ToString();
@@ -147,11 +148,11 @@ namespace QuanLyBanHang.UserControls
                 }
                 Bill bill = new Bill();
                 bill.ShowDialog();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -164,6 +165,20 @@ namespace QuanLyBanHang.UserControls
         {
             TimKhachHang timKhachHang = new TimKhachHang();
             timKhachHang.ShowDialog();
+        }
+
+     
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+               
+          
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            txtTenKhachHang.Text = Const.TenKhachHang;
         }
     }
 }

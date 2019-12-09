@@ -52,12 +52,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.lbCart = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbbTenKhachHang = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -66,7 +67,7 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -303,6 +304,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTenKhachHang);
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lbCart);
@@ -311,7 +314,6 @@
             this.groupBox2.Controls.Add(this.ptbCart);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.cbbTenKhachHang);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.lbTenNhanVien);
             this.groupBox2.Controls.Add(this.txtMaNV);
@@ -324,6 +326,27 @@
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thanh Toán";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(470, 198);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(64, 36);
+            this.button5.TabIndex = 35;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(540, 158);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(51, 39);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Tìm";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // lbCart
             // 
@@ -345,6 +368,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "Đăng Ký Khách Hàng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtGiamGia
             // 
@@ -365,20 +389,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(180, 181);
+            this.label7.Location = new System.Drawing.Point(180, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 25;
             this.label7.Text = "Tên Khách Hàng:";
-            // 
-            // cbbTenKhachHang
-            // 
-            this.cbbTenKhachHang.FormattingEnabled = true;
-            this.cbbTenKhachHang.Location = new System.Drawing.Point(318, 178);
-            this.cbbTenKhachHang.Name = "cbbTenKhachHang";
-            this.cbbTenKhachHang.Size = new System.Drawing.Size(216, 28);
-            this.cbbTenKhachHang.TabIndex = 2;
-            this.cbbTenKhachHang.Text = "KH01";
             // 
             // label10
             // 
@@ -459,15 +474,12 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "DASHBOARD";
             // 
-            // button4
+            // txtTenKhachHang
             // 
-            this.button4.Location = new System.Drawing.Point(540, 172);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(51, 39);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Tìm";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.txtTenKhachHang.Location = new System.Drawing.Point(318, 164);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(216, 26);
+            this.txtTenKhachHang.TabIndex = 36;
             // 
             // DashBoard
             // 
@@ -519,7 +531,6 @@
         private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbbTenKhachHang;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.TextBox txtMaNV;
@@ -536,5 +547,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
     }
 }

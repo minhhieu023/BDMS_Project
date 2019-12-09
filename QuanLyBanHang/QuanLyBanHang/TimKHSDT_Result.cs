@@ -13,6 +13,7 @@ namespace QuanLyBanHang
     
     public partial class TimKHSDT_Result
     {
+        public string KhachHangID { get; set; }
         public string Ten { get; set; }
         public string Sdt { get; set; }
     }

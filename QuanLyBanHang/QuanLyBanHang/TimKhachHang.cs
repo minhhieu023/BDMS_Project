@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace QuanLyBanHang
         {
             if(checkBox1.Checked == true)
             {
-                var find = context.TimKiemSDT(textBox1.Text);
+                var find = context.TimKHSDT(textBox1.Text);
                 dataGridView1.DataSource = find.ToList();
             }
             else
@@ -32,10 +33,26 @@ namespace QuanLyBanHang
             }
             if(textBox1.Text=="")
             {
-                dataGridView1.Rows.Clear();
-                dataGridView1.Refresh();
-
+                return;
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dataGridView1.CurrentCell.RowIndex;
+
+            Const.KhachHangID = dataGridView1.Rows[r].Cells[0].Value.ToString();
+            Const.TenKhachHang = dataGridView1.Rows[r].Cells[1].Value.ToString();
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int r = dataGridView1.CurrentCell.RowIndex;
+
+            Const.KhachHangID = dataGridView1.Rows[r].Cells[0].Value.ToString();
+            Const.TenKhachHang = dataGridView1.Rows[r].Cells[1].Value.ToString();
         }
     }
 }

@@ -28,6 +28,9 @@ namespace QuanLyBanHang
             var time = context.HoaDons.Find(Const.HoaDonID);
             lbTime.Text = time.NgayBan.ToString();
             dataGridView1.DataSource = context.XemHoaDon(Const.HoaDonID);
+            txtMaNV.Text = Const.maNhanVien;
+            txtKH.Text = Const.TenKhachHang;
+            lbtotal.Text = time.TongTien.ToString();
         }
      
     }

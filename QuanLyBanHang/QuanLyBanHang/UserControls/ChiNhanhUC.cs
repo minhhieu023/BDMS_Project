@@ -29,7 +29,6 @@ namespace QuanLyBanHang
         private void dgvChiNhanh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvChiNhanh.CurrentCell.RowIndex;
-
             txtMaCN.Text = dgvChiNhanh.Rows[r].Cells[0].Value.ToString();
             txtTenCN.Text = dgvChiNhanh.Rows[r].Cells[1].Value.ToString();
           
