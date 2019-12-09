@@ -25,10 +25,10 @@ namespace QuanLyBanHang.UserControls
                 return _instance;
             }
         }
-
         public DanhMucUC()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void dgvDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -36,8 +36,7 @@ namespace QuanLyBanHang.UserControls
             int r = dgvDanhMuc.CurrentCell.RowIndex;
             txtMaDM.Text = dgvDanhMuc.Rows[r].Cells[0].Value.ToString();
             txtTenDM.Text = dgvDanhMuc.Rows[r].Cells[1].Value.ToString();
-            var ChiNhanhID = context.ChiNhanhs.Find(dgvDanhMuc.Rows[r].Cells[2].Value.ToString());
-            cbbChiNhanhID.Text = ChiNhanhID.ChiNhanhID;
+            
         }
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
@@ -45,23 +44,25 @@ namespace QuanLyBanHang.UserControls
             dgvDanhMuc.DataSource = findDM;
             if (txtTimKiem.Text == "")
             {
-                dgvDanhMuc.DataSource = context.SelectDanhMuc(null);
+                dgvDanhMuc.DataSource = context.SelectDanhMuc();
             }
         }
-        private void DanhMucUC_Load(object sender, EventArgs e)
+        void LoadData()
         {
-
-            var DanhMuc = context.SelectDanhMuc(null);
+            var DanhMuc = context.SelectDanhMuc();
             dgvDanhMuc.DataSource = DanhMuc;
             DisabledProperties();
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
-            
-            this.cbbChiNhanhID.DataSource = context.ChiNhanhs.ToList();
-            this.cbbChiNhanhID.DisplayMember = "ChiNhanhID";
+
+            this.cbbChiNhanhID.DataSource = context.SelectChiNhanh();
+            this.cbbChiNhanhID.DisplayMember = "TenChiNhanh";
             this.cbbChiNhanhID.ValueMember = "ChiNhanhID";
             this.cbbChiNhanhID.Refresh();
-
+        }
+        private void DanhMucUC_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
         void DisabledProperties()
         {
@@ -95,7 +96,7 @@ namespace QuanLyBanHang.UserControls
                 if (dialogResult == DialogResult.Yes)
                 {
                     var NhanHieu = context.DeleteDanhMuc(txtMaDM.Text.Trim());
-                  DanhMucUC_Load(sender, e);
+                    LoadData();
                 }
             }
             catch
@@ -109,12 +110,12 @@ namespace QuanLyBanHang.UserControls
             {
                 try
                 {
-                    var DanhMuc = context.InsertDanhMuc(txtMaDM.Text.Trim(), txtTenDM.Text,cbbChiNhanhID.Text);
+                    var DanhMuc = context.InsertDanhMuc(txtMaDM.Text.Trim(), txtTenDM.Text);
                     MessageBox.Show("Inserted");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Something Wrong");
+                    MessageBox.Show(ex.Message);
                 }
                 DanhMucUC_Load(sender, e);
             }
@@ -122,14 +123,14 @@ namespace QuanLyBanHang.UserControls
             {
                 try
                 {
-                    var NhanHieu = context.UpdateDanhMuc(txtMaDM.Text.Trim(), txtTenDM.Text,cbbChiNhanhID.Text);
+                    var NhanHieu = context.UpdateDanhMuc(txtMaDM.Text.Trim(), txtTenDM.Text);
                     MessageBox.Show("Edited");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Something Wrong");
+                    MessageBox.Show(ex.Message);
                 }
-               DanhMucUC_Load(sender, e);
+                LoadData();
             }
         }
         private void btnHuy_Click(object sender, EventArgs e)
@@ -138,11 +139,11 @@ namespace QuanLyBanHang.UserControls
             btnSua.BackColor = Color.White;
             btnThem.Enabled = true; btnXoa.Enabled = true;
             btnXoa.Enabled = true;
-           DanhMucUC_Load(sender, e);
+            LoadData();
         }
         private void btnReload_Click(object sender, EventArgs e)
         {
-            DanhMucUC_Load(sender, e);
+            LoadData();
         }
     }
 }

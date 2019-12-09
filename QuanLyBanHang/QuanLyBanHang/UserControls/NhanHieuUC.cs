@@ -130,5 +130,15 @@ namespace QuanLyBanHang
                 dgvNhanHieu.DataSource = context.SelectNhanHieu(null);
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvNhanHieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

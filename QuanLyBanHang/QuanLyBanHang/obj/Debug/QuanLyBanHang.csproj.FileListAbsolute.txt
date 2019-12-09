@@ -250,3 +250,9 @@ D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe.licenses
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Bill.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.DashBoard.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.Login.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.NhanVienUC.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmLogIn.resources
+D:\WORK\DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControls.HoaDonUC.resources

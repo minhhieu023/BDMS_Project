@@ -35,9 +35,18 @@ namespace QuanLyBanHang
         public virtual DbSet<NhanHieu> NhanHieux { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TemptSP> TemptSPs { get; set; }
-        public virtual DbSet<SanPhamStored> SanPhamStoreds { get; set; }
+        public virtual DbSet<DASHBOARD> DASHBOARDs { get; set; }
+    
+        [DbFunction("QuanLyBanHangEntities", "View_tb_HoaDon")]
+        public virtual IQueryable<View_tb_HoaDon_Result> View_tb_HoaDon(string hoaDonID)
+        {
+            var hoaDonIDParameter = hoaDonID != null ?
+                new ObjectParameter("HoaDonID", hoaDonID) :
+                new ObjectParameter("HoaDonID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<View_tb_HoaDon_Result>("[QuanLyBanHangEntities].[View_tb_HoaDon](@HoaDonID)", hoaDonIDParameter);
+        }
     
         public virtual int DeleteChiNhanh(string chiNhanhId)
         {
@@ -102,15 +111,15 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertChiNhanh", chiNhanhIdParameter, tenChiNhanhParameter);
         }
     
-        public virtual int InsertChiTietHoaDon(string hoaDonID, string sanPhamID, Nullable<int> soLuong, Nullable<int> donGia, Nullable<int> giamGia, Nullable<int> thanhTien)
+        public virtual int InsertChiTietHoaDon(string hoaDonID, Nullable<int> sanPhamID, Nullable<int> soLuong, Nullable<int> donGia, Nullable<int> giamGia, Nullable<int> thanhTien)
         {
             var hoaDonIDParameter = hoaDonID != null ?
                 new ObjectParameter("HoaDonID", hoaDonID) :
                 new ObjectParameter("HoaDonID", typeof(string));
     
-            var sanPhamIDParameter = sanPhamID != null ?
+            var sanPhamIDParameter = sanPhamID.HasValue ?
                 new ObjectParameter("SanPhamID", sanPhamID) :
-                new ObjectParameter("SanPhamID", typeof(string));
+                new ObjectParameter("SanPhamID", typeof(int));
     
             var soLuongParameter = soLuong.HasValue ?
                 new ObjectParameter("SoLuong", soLuong) :
@@ -131,21 +140,17 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertChiTietHoaDon", hoaDonIDParameter, sanPhamIDParameter, soLuongParameter, donGiaParameter, giamGiaParameter, thanhTienParameter);
         }
     
-        public virtual int InsertDanhMuc(string danhMucID, string chiNhanhID, string tenDanhMuc)
+        public virtual int InsertDanhMuc(string danhMucID, string tenDanhMuc)
         {
             var danhMucIDParameter = danhMucID != null ?
                 new ObjectParameter("DanhMucID", danhMucID) :
                 new ObjectParameter("DanhMucID", typeof(string));
     
-            var chiNhanhIDParameter = chiNhanhID != null ?
-                new ObjectParameter("ChiNhanhID", chiNhanhID) :
-                new ObjectParameter("ChiNhanhID", typeof(string));
-    
             var tenDanhMucParameter = tenDanhMuc != null ?
                 new ObjectParameter("TenDanhMuc", tenDanhMuc) :
                 new ObjectParameter("TenDanhMuc", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertDanhMuc", danhMucIDParameter, chiNhanhIDParameter, tenDanhMucParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertDanhMuc", danhMucIDParameter, tenDanhMucParameter);
         }
     
         public virtual int InsertHoaDon(string khachHangID, string hoaDonID, string maNV, Nullable<System.DateTime> ngayBan, Nullable<int> tongTien)
@@ -240,7 +245,7 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertNhanVien", maNVParameter, tenNVParameter, matKhauParameter, chucVuParameter, maNQLParameter, chiNhanhIDParameter, luongParameter);
         }
     
-        public virtual int InsertSP(Nullable<int> sanPhamID, string chiTiet, string tenSP, string soLuong, Nullable<int> giaNhap, Nullable<int> giaBan, string nhaCungCap, string nhanHieuID, string danhMucID, byte[] hinhAnh)
+        public virtual int InsertSP(Nullable<int> sanPhamID, string chiTiet, string tenSP, Nullable<int> soLuong, Nullable<int> giaNhap, Nullable<int> giaBan, string nhaCungCap, string nhanHieuID, string danhMucID, byte[] hinhAnh)
         {
             var sanPhamIDParameter = sanPhamID.HasValue ?
                 new ObjectParameter("SanPhamID", sanPhamID) :
@@ -254,9 +259,9 @@ namespace QuanLyBanHang
                 new ObjectParameter("TenSP", tenSP) :
                 new ObjectParameter("TenSP", typeof(string));
     
-            var soLuongParameter = soLuong != null ?
+            var soLuongParameter = soLuong.HasValue ?
                 new ObjectParameter("SoLuong", soLuong) :
-                new ObjectParameter("SoLuong", typeof(string));
+                new ObjectParameter("SoLuong", typeof(int));
     
             var giaNhapParameter = giaNhap.HasValue ?
                 new ObjectParameter("GiaNhap", giaNhap) :
@@ -387,13 +392,14 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectChiTietHoaDon_Result>("SelectChiTietHoaDon");
         }
     
-        public virtual int SelectDanhMuc(string chiNhanhID)
+        public virtual ObjectResult<SelectDanhMuc_Result> SelectDanhMuc()
         {
-            var chiNhanhIDParameter = chiNhanhID != null ?
-                new ObjectParameter("ChiNhanhID", chiNhanhID) :
-                new ObjectParameter("ChiNhanhID", typeof(string));
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectDanhMuc_Result>("SelectDanhMuc");
+        }
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SelectDanhMuc", chiNhanhIDParameter);
+        public virtual ObjectResult<SelectHoaDon_Result> SelectHoaDon()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectHoaDon_Result>("SelectHoaDon");
         }
     
         public virtual ObjectResult<SelectNhanHieu_Result> SelectNhanHieu(string nhanHieuID)
@@ -403,6 +409,11 @@ namespace QuanLyBanHang
                 new ObjectParameter("NhanHieuID", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectNhanHieu_Result>("SelectNhanHieu", nhanHieuIDParameter);
+        }
+    
+        public virtual ObjectResult<SelectNhanVien_Result> SelectNhanVien()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SelectNhanVien_Result>("SelectNhanVien");
         }
     
         public virtual ObjectResult<SelectSanPham_Result> SelectSanPham()
@@ -567,21 +578,17 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateChiNhanh", chiNhanhIdParameter, tenChiNhanhParameter);
         }
     
-        public virtual int UpdateDanhMuc(string danhMucID, string chiNhanhID, string tenDanhMuc)
+        public virtual int UpdateDanhMuc(string danhMucID, string tenDanhMuc)
         {
             var danhMucIDParameter = danhMucID != null ?
                 new ObjectParameter("DanhMucID", danhMucID) :
                 new ObjectParameter("DanhMucID", typeof(string));
     
-            var chiNhanhIDParameter = chiNhanhID != null ?
-                new ObjectParameter("ChiNhanhID", chiNhanhID) :
-                new ObjectParameter("ChiNhanhID", typeof(string));
-    
             var tenDanhMucParameter = tenDanhMuc != null ?
                 new ObjectParameter("TenDanhMuc", tenDanhMuc) :
                 new ObjectParameter("TenDanhMuc", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateDanhMuc", danhMucIDParameter, chiNhanhIDParameter, tenDanhMucParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateDanhMuc", danhMucIDParameter, tenDanhMucParameter);
         }
     
         public virtual int UpdateKhachHang(string khachHangID, string hovaLot, string ten, string sdt)
@@ -651,7 +658,7 @@ namespace QuanLyBanHang
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateNhanVien", maNVParameter, tenNVParameter, matKhauParameter, chucVuParameter, maNQLParameter, chiNhanhIDParameter, luongParameter);
         }
     
-        public virtual int UpdateSP(Nullable<int> sanPhamID, string chiTiet, string tenSP, string soLuong, Nullable<int> giaNhap, Nullable<int> giaBan, string nhaCungCap, string nhanHieuID, string danhMucID, byte[] hinhAnh)
+        public virtual int UpdateSP(Nullable<int> sanPhamID, string chiTiet, string tenSP, Nullable<int> soLuong, Nullable<int> giaNhap, Nullable<int> giaBan, string nhaCungCap, string nhanHieuID, string danhMucID, byte[] hinhAnh)
         {
             var sanPhamIDParameter = sanPhamID.HasValue ?
                 new ObjectParameter("SanPhamID", sanPhamID) :
@@ -665,9 +672,9 @@ namespace QuanLyBanHang
                 new ObjectParameter("TenSP", tenSP) :
                 new ObjectParameter("TenSP", typeof(string));
     
-            var soLuongParameter = soLuong != null ?
+            var soLuongParameter = soLuong.HasValue ?
                 new ObjectParameter("SoLuong", soLuong) :
-                new ObjectParameter("SoLuong", typeof(string));
+                new ObjectParameter("SoLuong", typeof(int));
     
             var giaNhapParameter = giaNhap.HasValue ?
                 new ObjectParameter("GiaNhap", giaNhap) :
@@ -703,6 +710,15 @@ namespace QuanLyBanHang
                 new ObjectParameter("ID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateUTempSP", iDParameter);
+        }
+    
+        public virtual ObjectResult<XemHoaDon_Result> XemHoaDon(string hoaDonID)
+        {
+            var hoaDonIDParameter = hoaDonID != null ?
+                new ObjectParameter("HoaDonID", hoaDonID) :
+                new ObjectParameter("HoaDonID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<XemHoaDon_Result>("XemHoaDon", hoaDonIDParameter);
         }
     }
 }

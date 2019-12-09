@@ -87,28 +87,6 @@
     <Property Name="DanhMucID" Type="nchar" MaxLength="10" />
     <Property Name="HinhAnh" Type="image" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QuanLyBanHang.dbo.SanPhamStored' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="SanPhamStored">
-    <Key>
-      <PropertyRef Name="SanPhamID" />
-    </Key>
-    <Property Name="SanPhamID" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="DonGia" Type="int" />
-    <Property Name="ChiTiet" Type="nchar" MaxLength="10" />
-    <Property Name="TenSP" Type="nchar" MaxLength="10" />
-    <Property Name="NhanHieuID" Type="nchar" MaxLength="10" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TemptSP">
     <Key>
       <PropertyRef Name="ID" />
@@ -124,6 +102,20 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
           <Property Name="TenChiNhanh" Type="nvarchar" MaxLength="50" />
           <Property Name="TenDanhMuc" Type="nvarchar" MaxLength="50" />
         </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLyBanHang.dbo.DASHBOARD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DASHBOARD">
+    <Key>
+      <PropertyRef Name="Mã Sản Phẩm" />
+    </Key>
+    <Property Name="Mã Sản Phẩm" Type="int" Nullable="false" />
+    <Property Name="Tên Sản Phẩm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Số Lượng" Type="int" />
+    <Property Name="Giá Bán" Type="int" />
+    <Property Name="Tên Danh Mục" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tên Nhãn Hiệu" Type="nchar" MaxLength="10" />
+    <Property Name="Hình Ảnh" Type="image" />
+  </EntityType>
   <Association Name="FK_ChiTietHoaDon_HoaDon1">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
     <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
@@ -270,6 +262,9 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   </Function>
   <Function Name="DeleteTempSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Function_ToTalPay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
+  </Function>
   <Function Name="helloworldfunction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
   <Function Name="InsertChiNhanh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ChiNhanhId" Type="nchar" Mode="In" />
@@ -277,7 +272,7 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   </Function>
   <Function Name="InsertChiTietHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
-    <Parameter Name="SanPhamID" Type="nvarchar" Mode="In" />
+    <Parameter Name="SanPhamID" Type="int" Mode="In" />
     <Parameter Name="SoLuong" Type="int" Mode="In" />
     <Parameter Name="DonGia" Type="int" Mode="In" />
     <Parameter Name="GiamGia" Type="int" Mode="In" />
@@ -285,7 +280,6 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   </Function>
   <Function Name="InsertDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DanhMucID" Type="nchar" Mode="In" />
-    <Parameter Name="ChiNhanhID" Type="nchar" Mode="In" />
     <Parameter Name="TenDanhMuc" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="InsertHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -318,7 +312,7 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
     <Parameter Name="SanPhamID" Type="int" Mode="In" />
     <Parameter Name="ChiTiet" Type="nvarchar" Mode="In" />
     <Parameter Name="TenSP" Type="nvarchar" Mode="In" />
-    <Parameter Name="SoLuong" Type="nchar" Mode="In" />
+    <Parameter Name="SoLuong" Type="int" Mode="In" />
     <Parameter Name="GiaNhap" Type="int" Mode="In" />
     <Parameter Name="GiaBan" Type="int" Mode="In" />
     <Parameter Name="NhaCungCap" Type="nchar" Mode="In" />
@@ -354,12 +348,11 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   </Function>
   <Function Name="SelectChiNhanh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectChiTietHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="SelectDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="ChiNhanhID" Type="nchar" Mode="In" />
-  </Function>
+  <Function Name="SelectDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectNhanHieu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="NhanHieuID" Type="nchar" Mode="In" />
   </Function>
+  <Function Name="SelectNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectSanPham" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="SelectTemptSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -410,7 +403,6 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   </Function>
   <Function Name="UpdateDanhMuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DanhMucID" Type="nchar" Mode="In" />
-    <Parameter Name="ChiNhanhID" Type="nchar" Mode="In" />
     <Parameter Name="TenDanhMuc" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="UpdateKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -436,7 +428,7 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
     <Parameter Name="SanPhamID" Type="int" Mode="In" />
     <Parameter Name="ChiTiet" Type="nvarchar" Mode="In" />
     <Parameter Name="TenSP" Type="nvarchar" Mode="In" />
-    <Parameter Name="SoLuong" Type="nchar" Mode="In" />
+    <Parameter Name="SoLuong" Type="int" Mode="In" />
     <Parameter Name="GiaNhap" Type="int" Mode="In" />
     <Parameter Name="GiaBan" Type="int" Mode="In" />
     <Parameter Name="NhaCungCap" Type="nchar" Mode="In" />
@@ -451,6 +443,21 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
   <Function Name="updateUTempSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID" Type="int" Mode="In" />
   </Function>
+  <Function Name="View_tb_HoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Sản Phẩm" Type="nvarchar" MaxLength="50" />
+          <Property Name="Số Lượng" Type="int" />
+          <Property Name="Đơn Giá" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="XemHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HoaDonID" Type="nchar" Mode="In" />
+  </Function>
   <EntityContainer Name="QuanLyBanHangModelStoreContainer">
     <EntitySet Name="ChiNhanh" EntityType="Self.ChiNhanh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
@@ -461,16 +468,17 @@ warning 6013: The table/view 'QuanLyBanHang.dbo.ChiNhanh_DanhMuc_View' does not 
     <EntitySet Name="NhanHieu" EntityType="Self.NhanHieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TemptSP" EntityType="Self.TemptSP" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="SanPhamStored" EntityType="Self.SanPhamStored" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="DASHBOARD" EntityType="Self.DASHBOARD" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [SanPhamStored].[SanPhamID] AS [SanPhamID], 
-    [SanPhamStored].[DonGia] AS [DonGia], 
-    [SanPhamStored].[ChiTiet] AS [ChiTiet], 
-    [SanPhamStored].[TenSP] AS [TenSP], 
-    [SanPhamStored].[NhanHieuID] AS [NhanHieuID]
-    FROM [dbo].[SanPhamStored] AS [SanPhamStored]</DefiningQuery>
+    [DASHBOARD].[Mã Sản Phẩm] AS [Mã Sản Phẩm], 
+    [DASHBOARD].[Tên Sản Phẩm] AS [Tên Sản Phẩm], 
+    [DASHBOARD].[Số Lượng] AS [Số Lượng], 
+    [DASHBOARD].[Giá Bán] AS [Giá Bán], 
+    [DASHBOARD].[Tên Danh Mục] AS [Tên Danh Mục], 
+    [DASHBOARD].[Tên Nhãn Hiệu] AS [Tên Nhãn Hiệu], 
+    [DASHBOARD].[Hình Ảnh] AS [Hình Ảnh]
+    FROM [dbo].[DASHBOARD] AS [DASHBOARD]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_ChiTietHoaDon_HoaDon1" Association="Self.FK_ChiTietHoaDon_HoaDon1">
       <End Role="HoaDon" EntitySet="HoaDon" />

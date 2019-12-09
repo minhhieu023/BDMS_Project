@@ -23,6 +23,7 @@ namespace QuanLyBanHang
         {
            
             InitializeComponent();
+          
 
         }
         private void dgvChiNhanh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -127,7 +128,7 @@ namespace QuanLyBanHang
             dgvChiNhanh.DataSource = findCN;
             if (txtTimKiem.Text == "")
             {
-                dgvChiNhanh.DataSource = context.SelectDanhMuc(null);
+                dgvChiNhanh.DataSource = context.SelectDanhMuc();
             }
         }
     }

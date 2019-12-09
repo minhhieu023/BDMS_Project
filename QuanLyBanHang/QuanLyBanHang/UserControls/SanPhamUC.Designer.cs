@@ -58,16 +58,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
-            this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ptbCart = new System.Windows.Forms.PictureBox();
-            this.lbCart = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgvLog = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -100,7 +94,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(179, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1252, 296);
             this.groupBox1.TabIndex = 1;
@@ -133,7 +127,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.button1.Location = new System.Drawing.Point(586, 188);
+            this.button1.Location = new System.Drawing.Point(586, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 71);
             this.button1.TabIndex = 21;
@@ -385,85 +379,39 @@
             // 
             this.dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Action});
             this.dgvSanPham.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgvSanPham.Location = new System.Drawing.Point(0, 305);
+            this.dgvSanPham.Location = new System.Drawing.Point(179, 383);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvSanPham.Size = new System.Drawing.Size(1255, 696);
+            this.dgvSanPham.Size = new System.Drawing.Size(1252, 600);
             this.dgvSanPham.TabIndex = 17;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PHIM_CellClick);
-            // 
-            // Action
-            // 
-            this.Action.FillWeight = 50F;
-            this.Action.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Action.HeaderText = "Add to Bag";
-            this.Action.Name = "Action";
-            this.Action.Text = "Add";
-            this.Action.UseColumnTextForButtonValue = true;
-            // 
-            // ptbCart
-            // 
-            this.ptbCart.Image = ((System.Drawing.Image)(resources.GetObject("ptbCart.Image")));
-            this.ptbCart.Location = new System.Drawing.Point(1292, 19);
-            this.ptbCart.Name = "ptbCart";
-            this.ptbCart.Size = new System.Drawing.Size(89, 82);
-            this.ptbCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbCart.TabIndex = 18;
-            this.ptbCart.TabStop = false;
-            // 
-            // lbCart
-            // 
-            this.lbCart.AutoSize = true;
-            this.lbCart.Font = new System.Drawing.Font("MS Reference Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCart.ForeColor = System.Drawing.Color.Red;
-            this.lbCart.Location = new System.Drawing.Point(1372, 17);
-            this.lbCart.Name = "lbCart";
-            this.lbCart.Size = new System.Drawing.Size(43, 44);
-            this.lbCart.TabIndex = 19;
-            this.lbCart.Text = "0";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1288, 126);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(613, 11);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 19);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Log: ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // dgvLog
-            // 
-            this.dgvLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLog.Location = new System.Drawing.Point(1292, 174);
-            this.dgvLog.Name = "dgvLog";
-            this.dgvLog.Size = new System.Drawing.Size(490, 266);
-            this.dgvLog.TabIndex = 22;
+            this.label9.Size = new System.Drawing.Size(366, 73);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "SẢN PHẨM";
             // 
             // SanPhamUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvLog);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.lbCart);
-            this.Controls.Add(this.ptbCart);
             this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.groupBox1);
             this.Name = "SanPhamUC";
-            this.Size = new System.Drawing.Size(1797, 1004);
+            this.Size = new System.Drawing.Size(1577, 992);
             this.Load += new System.EventHandler(this.SanPhamUC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,10 +447,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbbNhanHieu;
         private System.Windows.Forms.ComboBox cbbDanhMuc;
-        private System.Windows.Forms.DataGridViewButtonColumn Action;
-        private System.Windows.Forms.PictureBox ptbCart;
-        private System.Windows.Forms.Label lbCart;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dgvLog;
     }
 }

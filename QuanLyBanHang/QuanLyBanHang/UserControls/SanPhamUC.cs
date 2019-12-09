@@ -15,6 +15,7 @@ namespace QuanLyBanHang.Controllers
         private string MaDM= "";
         private string MaNH= "";
         QuanLyBanHangEntities context = new QuanLyBanHangEntities();
+        private static Random random = new Random();
         private static SanPhamUC _instance;
         public static SanPhamUC Instance
         {
@@ -44,22 +45,17 @@ namespace QuanLyBanHang.Controllers
             dgvSanPham.DataSource = context.SelectSanPham();
             for (int i = 0; i < dgvSanPham.Columns.Count; i++)
             {
-                if (dgvSanPham.Columns[i] is DataGridViewImageColumn)
+                if (dgvSanPham.Columns[i] is DataGridViewImageColumn )
                 {
                     dgvSanPham.RowTemplate.Height = 120;
                     ((DataGridViewImageColumn)dgvSanPham.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
                  
                 }
-                if (dgvSanPham.Columns[i] is DataGridViewButtonColumn)
-                {
-
-                    dgvSanPham.Columns[i].DisplayIndex = 10;
-
-                }
+             
             }
 
             context.DeleteTempSP();
-            dgvLog.DataSource = context.SelectTemptSP();
+            //dgvLog.DataSource = context.SelectTemptSP();
 
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
@@ -119,20 +115,20 @@ namespace QuanLyBanHang.Controllers
         {
             int r = dgvSanPham.CurrentCell.RowIndex;
 
-            txtMaSP.Text = dgvSanPham.Rows[r].Cells[1].Value.ToString();
-            txtChiTiet.Text = dgvSanPham.Rows[r].Cells[2].Value.ToString();
-            txtTenSP.Text = dgvSanPham.Rows[r].Cells[3].Value.ToString();
-            txtSoLuong.Text = dgvSanPham.Rows[r].Cells[4].Value.ToString();
-            txtGiaNhap.Text = dgvSanPham.Rows[r].Cells[5].Value.ToString();
-            txtGiaBan.Text = dgvSanPham.Rows[r].Cells[6].Value.ToString();
-            txtNCC.Text = dgvSanPham.Rows[r].Cells[7].Value.ToString();
-            var tenNhanHieu = context.NhanHieux.Find(dgvSanPham.Rows[r].Cells[8].Value.ToString());
+            txtMaSP.Text = dgvSanPham.Rows[r].Cells[0].Value.ToString();
+            txtChiTiet.Text = dgvSanPham.Rows[r].Cells[1].Value.ToString();
+            txtTenSP.Text = dgvSanPham.Rows[r].Cells[2].Value.ToString();
+            txtSoLuong.Text = dgvSanPham.Rows[r].Cells[3].Value.ToString();
+            txtGiaNhap.Text = dgvSanPham.Rows[r].Cells[4].Value.ToString();
+            txtGiaBan.Text = dgvSanPham.Rows[r].Cells[5].Value.ToString();
+            txtNCC.Text = dgvSanPham.Rows[r].Cells[6].Value.ToString();
+            var tenNhanHieu = context.NhanHieux.Find(dgvSanPham.Rows[r].Cells[7].Value.ToString());
             cbbNhanHieu.Text = tenNhanHieu.TenNhanHieu;
            
-            var tendanhMuc = context.DanhMucs.Find(dgvSanPham.Rows[r].Cells[9].Value.ToString());
-            if (dgvSanPham.Rows[r].Cells[10].Value != null)
+            var tendanhMuc = context.DanhMucs.Find(dgvSanPham.Rows[r].Cells[8].Value.ToString());
+            if (dgvSanPham.Rows[r].Cells[9].Value != null)
             {
-                ap = (byte[])(dgvSanPham.Rows[r].Cells[10].Value);
+                ap = (byte[])(dgvSanPham.Rows[r].Cells[9].Value);
                 MemoryStream ms = new MemoryStream(ap);
                 pictureBox1.Image = Image.FromStream(ms);
             }
@@ -141,25 +137,14 @@ namespace QuanLyBanHang.Controllers
                 cbbDanhMuc.Text = tendanhMuc.TenDanhMuc.ToString();
             }
 
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
-            {
-                try
-                {
-                    var Insert = context.InsertTempSP(Int32.Parse(txtMaSP.Text),1 ,txtTenSP.Text,Int32.Parse( txtGiaBan.Text));
-                    dgvLog.DataSource = context.SelectTemptSP();
-                }
-                catch
-                {
-                    var Update = context.updateUTempSP(Int32.Parse(txtMaSP.Text));
-                    dgvLog.DataSource = context.SelectTemptSP();
-                }
-                lbCart.Text = (Int32.Parse(lbCart.Text) + 1).ToString();
-            }
+        
         }
-
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -236,7 +221,7 @@ namespace QuanLyBanHang.Controllers
                     MemoryStream pic = new MemoryStream();
                     pictureBox1.Image.Save(pic, pictureBox1.Image.RawFormat);
                     var findRow = context.SanPhams.Max(s => s.SanPhamID);
-                    var SanPham = context.InsertSP((Int32.Parse(findRow.ToString()) + 1), txtChiTiet.Text, txtTenSP.Text.Trim(), txtSoLuong.Text, Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
+                    var SanPham = context.InsertSP((Int32.Parse(findRow.ToString()) + 1), txtChiTiet.Text, txtTenSP.Text.Trim(), Int32.Parse(txtSoLuong.Text), Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
                      txtNCC.Text, MaNH, MaDM, pic.ToArray());
                         MessageBox.Show("Inserted");
                 }
@@ -256,23 +241,23 @@ namespace QuanLyBanHang.Controllers
                         pictureBox1.Image.Save(pic, pictureBox1.Image.RawFormat);
                         if (MaDM == "" && MaNH == "")
                         {
-                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), txtSoLuong.Text, Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
+                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), Int32.Parse(txtSoLuong.Text), Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
                                  txtNCC.Text, dgvSanPham.Rows[r].Cells[7].Value.ToString(), dgvSanPham.Rows[r].Cells[8].Value.ToString(), pic.ToArray());
 
                         }
                         else if (MaDM == "")
                         {
-                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), txtSoLuong.Text, Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
+                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), Int32.Parse(txtSoLuong.Text), Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
                                  txtNCC.Text, MaNH, dgvSanPham.Rows[r].Cells[8].Value.ToString(), pic.ToArray());
                         }
                         else if (MaNH == "")
                         {
-                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), txtSoLuong.Text, Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
+                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), Int32.Parse(txtSoLuong.Text), Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
                                 txtNCC.Text, dgvSanPham.Rows[r].Cells[7].Value.ToString(), MaDM, pic.ToArray());
                         }
                         else
                         {
-                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), txtSoLuong.Text, Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
+                            var SanPham = context.UpdateSP((Int32.Parse(txtMaSP.Text.ToString())), txtChiTiet.Text, txtTenSP.Text.Trim(), Int32.Parse(txtSoLuong.Text), Int32.Parse(txtGiaNhap.Text), Int32.Parse(txtGiaBan.Text),
                                 txtNCC.Text, MaNH, MaDM, pic.ToArray());
                         }
 

@@ -62,6 +62,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiNhanh.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
@@ -71,11 +77,20 @@
     <Compile Include="DanhMuc.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DASHBOARD.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
@@ -113,16 +128,23 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SanPhamStored.cs">
-      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="SeedData.cs" />
     <Compile Include="SelectChiNhanh_Result.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SelectChiTietHoaDon_Result.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SelectDanhMuc_Result.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectHoaDon_Result.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SelectNhanHieu_Result.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectNhanVien_Result.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SelectSanPham_Result.cs">
@@ -135,9 +157,6 @@
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TemptSP.cs">
@@ -155,6 +174,18 @@
     <Compile Include="TimSP_Result.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HoaDonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HoaDonUC.Designer.cs">
+      <DependentUpon>HoaDonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NhanVienUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NhanVienUC.designer.cs">
+      <DependentUpon>NhanVienUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ChiNhanhUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,11 +198,24 @@
     <Compile Include="UserControls\DanhMucUC.Designer.cs">
       <DependentUpon>DanhMucUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Const.cs" />
     <Compile Include="UserControls\KhachHangUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\KhachHangUC.Designer.cs">
       <DependentUpon>KhachHangUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\NhanHieuUC.cs">
       <SubType>UserControl</SubType>
@@ -187,8 +231,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View_tb_HoaDon_Result.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XemHoaDon_Result.cs">
+      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HoaDonUC.resx">
+      <DependentUpon>HoaDonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NhanVienUC.resx">
+      <DependentUpon>NhanVienUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ChiNhanhUC.resx">
       <DependentUpon>ChiNhanhUC.cs</DependentUpon>
@@ -196,8 +258,14 @@
     <EmbeddedResource Include="UserControls\DanhMucUC.resx">
       <DependentUpon>DanhMucUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KhachHangUC.resx">
       <DependentUpon>KhachHangUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\NhanHieuUC.resx">
       <DependentUpon>NhanHieuUC.cs</DependentUpon>

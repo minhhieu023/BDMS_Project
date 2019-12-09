@@ -11,19 +11,23 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
             LoadForm();
-          //  FormBorderStyle = FormBorderStyle.None;
+            
             WindowState = FormWindowState.Maximized;
+            menuStrip1.Visible = true;
+            if (!panel.Controls.Contains(DashBoard.Instance))
+            {
+                panel.Controls.Add(DashBoard.Instance);
+                DashBoard.Instance.Dock = DockStyle.Fill;
+                DashBoard.Instance.BringToFront();
+            }
+            else
+                DashBoard.Instance.BringToFront();
+            //label1.Text = "DASHBOARD";
         }
         public void LoadForm()
         {
-            if (!panel.Controls.Contains(SanPhamUC.Instance))
-            {
-                panel.Controls.Add(SanPhamUC.Instance);
-                SanPhamUC.Instance.Dock = DockStyle.Fill;
-                SanPhamUC.Instance.BringToFront();
-            }
-            else
-                SanPhamUC.Instance.BringToFront();
+            if (Const.isLogIn == true)
+                menuStrip1.Visible = true;
         }
 
         private void nhãnHiệuToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -36,6 +40,7 @@ namespace QuanLyBanHang
             }
             else
                 NhanHieuUC.Instance.BringToFront();
+             //    label1.Text = "NHÃN HIỆU";
         }
 
         private void sảnPhẩmToolStripMenuItem1_Click(object sender, System.EventArgs e)
@@ -48,6 +53,7 @@ namespace QuanLyBanHang
             }
             else
                 SanPhamUC.Instance.BringToFront();
+           // label1.Text = "SẢN PHẨM";
         }
 
         private void Form1_Load(object sender, System.EventArgs e)
@@ -65,6 +71,7 @@ namespace QuanLyBanHang
             }
             else
                DanhMucUC.Instance.BringToFront();
+          //  label1.Text = "DANH MỤC";
         }
 
         private void chiNhánhToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -77,6 +84,51 @@ namespace QuanLyBanHang
             }
             else
                 ChiNhanhUC.Instance.BringToFront();
+           // label1.Text = "CHI NHANH";
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            FrmLogIn frmLogIn = new FrmLogIn();
+            frmLogIn.ShowDialog();
+                
+        }
+
+        private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!panel.Controls.Contains(DashBoard.Instance))
+            {
+                panel.Controls.Add(DashBoard.Instance);
+                DashBoard.Instance.Dock = DockStyle.Fill;
+                DashBoard.Instance.BringToFront();
+            }
+            else
+                DashBoard.Instance.BringToFront();
+           // label1.Text = "DASHBOARD";
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!panel.Controls.Contains(NhanVienUC.Instance))
+            {
+                panel.Controls.Add(NhanVienUC.Instance);
+                NhanVienUC.Instance.Dock = DockStyle.Fill;
+                NhanVienUC.Instance.BringToFront();
+            }
+            else
+                NhanVienUC.Instance.BringToFront();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!panel.Controls.Contains(NhanHieuUC.Instance))
+            {
+                panel.Controls.Add(NhanVienUC.Instance);
+                NhanVienUC.Instance.Dock = DockStyle.Fill;
+                NhanVienUC.Instance.BringToFront();
+            }
+            else
+                NhanVienUC.Instance.BringToFront();
         }
     }
 
