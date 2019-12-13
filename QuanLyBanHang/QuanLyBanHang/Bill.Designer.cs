@@ -30,17 +30,17 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtKH = new System.Windows.Forms.TextBox();
             this.lbTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbTenNV = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbtotal = new System.Windows.Forms.Label();
-            this.txtKH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbTenNV);
             this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -73,6 +73,14 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // txtKH
+            // 
+            this.txtKH.Enabled = false;
+            this.txtKH.Location = new System.Drawing.Point(205, 206);
+            this.txtKH.Name = "txtKH";
+            this.txtKH.Size = new System.Drawing.Size(216, 26);
+            this.txtKH.TabIndex = 28;
             // 
             // lbTime
             // 
@@ -112,15 +120,15 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "HÓA ĐƠN";
             // 
-            // label3
+            // lbTenNV
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(256, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 31);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Tên Nhân Viên";
+            this.lbTenNV.AutoSize = true;
+            this.lbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNV.Location = new System.Drawing.Point(256, 107);
+            this.lbTenNV.Name = "lbTenNV";
+            this.lbTenNV.Size = new System.Drawing.Size(194, 31);
+            this.lbTenNV.TabIndex = 22;
+            this.lbTenNV.Text = "Tên Nhân Viên";
             // 
             // txtMaNV
             // 
@@ -169,14 +177,6 @@
             this.lbtotal.TabIndex = 35;
             this.lbtotal.Text = "Tạm tính:";
             // 
-            // txtKH
-            // 
-            this.txtKH.Enabled = false;
-            this.txtKH.Location = new System.Drawing.Point(205, 206);
-            this.txtKH.Name = "txtKH";
-            this.txtKH.Size = new System.Drawing.Size(216, 26);
-            this.txtKH.TabIndex = 28;
-            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +204,7 @@
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbTenNV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbTime;

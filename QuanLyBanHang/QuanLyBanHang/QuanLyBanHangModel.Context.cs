@@ -35,7 +35,6 @@ namespace QuanLyBanHang
         public virtual DbSet<NhanHieu> NhanHieux { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TemptSP> TemptSPs { get; set; }
         public virtual DbSet<SanPhamStored> SanPhamStoreds { get; set; }
         public virtual DbSet<DASHBOARD> DASHBOARDs { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.UserControls;
+using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -41,7 +42,14 @@ namespace QuanLyBanHang.Controllers
         }
         void LoadData()
         {
-           
+            if (Const.isNQL == false )
+            {
+                //btnThem.Visible = false;
+                //btnSua.Visible = false;
+                  btnXoa.Visible = false;
+                //btnLuu.Visible = false;
+            }
+
             dgvSanPham.DataSource = context.SelectSanPham();
             for (int i = 0; i < dgvSanPham.Columns.Count; i++)
             {

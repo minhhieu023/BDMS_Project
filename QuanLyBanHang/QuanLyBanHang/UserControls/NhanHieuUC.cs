@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.UserControls;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -35,6 +36,13 @@ namespace QuanLyBanHang
         }       
         private void NhanHieuUC_Load(object sender, System.EventArgs e)
         {
+            if (Const.isNQL == false)
+            {
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+               // btnXoa.Visible = false;
+                btnLuu.Visible = false;
+            }
             var NhanHieu = context.SelectNhanHieu(null);
             dgvNhanHieu.DataSource = NhanHieu;
             DisabledProperties();

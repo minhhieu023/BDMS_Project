@@ -11,7 +11,31 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
             LoadForm();
-            
+            //if (Const.tenNhanVien != "Super Admin" && Const.isNQL == false)
+            //{
+            //    nhãnHiệuToolStripMenuItem.Visible = false;
+            //    sảnPhẩmToolStripMenuItem1.Visible = false;
+            //    danhMụcToolStripMenuItem1.Visible = false;
+            //    nhânViênToolStripMenuItem.Visible = false;
+            //    chiNhánhToolStripMenuItem.Visible = false;
+            //}
+            //else if (Const.isNQL == true && Const.tenNhanVien != "Super Admin")
+            //{
+            //    chiNhánhToolStripMenuItem.Visible = false;
+            //    nhãnHiệuToolStripMenuItem.Visible = false;
+            //    sảnPhẩmToolStripMenuItem1.Visible = false;
+            //    danhMụcToolStripMenuItem1.Visible = false;
+            //    nhânViênToolStripMenuItem.Visible = false;
+            //}
+            //else if (Const.isNQL == false && Const.tenNhanVien != "Super Admin")
+            //{
+            //    nhãnHiệuToolStripMenuItem.Visible = false;
+            //    sảnPhẩmToolStripMenuItem1.Visible = false;
+            //    danhMụcToolStripMenuItem1.Visible = false;
+            //    nhânViênToolStripMenuItem.Visible = false;
+            //    chiNhánhToolStripMenuItem.Visible = false;
+            //}
+
             WindowState = FormWindowState.Maximized;
             menuStrip1.Visible = true;
             if (!panel.Controls.Contains(DashBoard.Instance))
@@ -153,6 +177,12 @@ namespace QuanLyBanHang
             }
             else
                 KhachHangUC.Instance.BringToFront();
+        }
+
+        private void switchAccountToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FrmLogIn frm = new FrmLogIn();
+            frm.ShowDialog();
         }
     }
 

@@ -198,6 +198,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(285, 26);
             this.txtTimKiem.TabIndex = 6;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // lbtimkiem
             // 
@@ -482,6 +483,7 @@
             this.Controls.Add(this.dgvSanPham);
             this.Name = "DashBoard";
             this.Size = new System.Drawing.Size(1577, 992);
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();

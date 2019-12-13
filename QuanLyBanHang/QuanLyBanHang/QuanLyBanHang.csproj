@@ -168,9 +168,6 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="TemptSP.cs">
       <DependentUpon>QuanLyBanHangModel.tt</DependentUpon>
     </Compile>

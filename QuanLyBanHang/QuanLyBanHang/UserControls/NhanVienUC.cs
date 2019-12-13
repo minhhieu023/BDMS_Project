@@ -41,6 +41,7 @@ namespace QuanLyBanHang.UserControls
         void LoadData()
         {
             dgvNhanVien.DataSource = context.SelectNhanVien();
+          
             if (Const.isNQL == false)
             {
                 btnThem.Visible = false;
@@ -186,19 +187,33 @@ namespace QuanLyBanHang.UserControls
         }
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = dgvNhanVien.CurrentCell.RowIndex;
-            txtMaNV.Text = dgvNhanVien.Rows[r].Cells[0].Value.ToString();
-            txtTenNV.Text = dgvNhanVien.Rows[r].Cells[1].Value.ToString();
-            txtMatKhau.Text = dgvNhanVien.Rows[r].Cells[2].Value.ToString();
-            txtChucVu.Text = dgvNhanVien.Rows[r].Cells[3].Value.ToString();
-            if (dgvNhanVien.Rows[r].Cells[4].Value == null)
-                cbbMaNQL.Text = "ADMIN";
-            else
-            cbbMaNQL.Text = dgvNhanVien.Rows[r].Cells[4].Value.ToString();
-            var ChiNhanhID = context.ChiNhanhs.Find(dgvNhanVien.Rows[r].Cells[5].Value.ToString());
-            cbbChiNhanhID.Text = ChiNhanhID.ChiNhanhID;
-            txtLuong.Text = dgvNhanVien.Rows[r].Cells[6].Value.ToString();
-        }
+            try
+            {
+             
+                int r = dgvNhanVien.CurrentCell.RowIndex;
+                txtMaNV.Text = dgvNhanVien.Rows[r].Cells[0].Value.ToString();
+                txtTenNV.Text = dgvNhanVien.Rows[r].Cells[1].Value.ToString();
+                txtMatKhau.Text = dgvNhanVien.Rows[r].Cells[2].Value.ToString();
+                txtChucVu.Text = dgvNhanVien.Rows[r].Cells[3].Value.ToString();
+                if (dgvNhanVien.Rows[r].Cells[4].Value == null)
+                    cbbMaNQL.Text = "ADMIN";
+                else
+                    cbbMaNQL.Text = dgvNhanVien.Rows[r].Cells[4].Value.ToString();
+
+                if (dgvNhanVien.Rows[r].Cells[5].Value.ToString() == "")
+                    cbbChiNhanhID.Text = dgvNhanVien.Rows[r].Cells[5].Value.ToString();
+                else
+                {
+                    cbbChiNhanhID.Text = "Admin";
+                }
+                txtLuong.Text = dgvNhanVien.Rows[r].Cells[6].Value.ToString();
+                txtLuong.Text = dgvNhanVien.Rows[r].Cells[6].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
             var findDM = context.NhanViens.Find(txtMaNV.Text);

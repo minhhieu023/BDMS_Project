@@ -104,16 +104,6 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.SanPhamStored' does not have a p
           <Property Name="TenSP" Type="nchar" MaxLength="10" />
           <Property Name="NhanHieuID" Type="nchar" MaxLength="10" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="TemptSP">
           <Key>
             <PropertyRef Name="ID" />
@@ -537,7 +527,6 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a pri
           <EntitySet Name="NhanHieu" EntityType="Self.NhanHieu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TemptSP" EntityType="Self.TemptSP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPhamStored" EntityType="Self.SanPhamStored" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -727,16 +716,6 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a pri
           <NavigationProperty Name="DanhMuc" Relationship="Self.FK_SanPham_DanhMuc1" FromRole="SanPham" ToRole="DanhMuc" />
           <NavigationProperty Name="NhanHieu" Relationship="Self.FK_SanPham_NhanHieu" FromRole="SanPham" ToRole="NhanHieu" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="TemptSP">
           <Key>
             <PropertyRef Name="ID" />
@@ -890,7 +869,6 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a pri
           <EntitySet Name="NhanHieux" EntityType="Self.NhanHieu" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TemptSPs" EntityType="Self.TemptSP" />
           <EntitySet Name="SanPhamStoreds" EntityType="Self.SanPhamStored" />
           <EntitySet Name="DASHBOARDs" EntityType="Self.DASHBOARD" />
@@ -1358,17 +1336,6 @@ warning 6002: The table/view 'QuanLyBanHang.dbo.View_HoaDon' does not have a pri
                 <ScalarProperty Name="NhanHieuID" ColumnName="NhanHieuID" />
                 <ScalarProperty Name="DanhMucID" ColumnName="DanhMucID" />
                 <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

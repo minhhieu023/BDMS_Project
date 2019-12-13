@@ -49,12 +49,19 @@ namespace QuanLyBanHang.UserControls
         }
         void LoadData()
         {
+            if(Const.isNQL == false)
+            {
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+                btnLuu.Visible = false;
+            }
             var DanhMuc = context.SelectDanhMuc();
             dgvDanhMuc.DataSource = DanhMuc;
             DisabledProperties();
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
-
+          //  dataGridView1.DataSource = context
             this.cbbChiNhanhID.DataSource = context.SelectChiNhanh();
             this.cbbChiNhanhID.DisplayMember = "TenChiNhanh";
             this.cbbChiNhanhID.ValueMember = "ChiNhanhID";

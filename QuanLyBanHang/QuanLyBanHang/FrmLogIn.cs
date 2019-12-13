@@ -30,9 +30,29 @@ namespace QuanLyBanHang
             {
                 //try
                 //{
-                    conn.Open();
-                    string tk = txtMaNV.Text;
-                    string mk = txtMatKhau.Text;
+                conn.Open();
+                string tk = txtMaNV.Text;
+                string mk = txtMatKhau.Text;
+                if (tk == "admin" && mk == "123")
+                {
+                    
+                   
+                    Const.maNhanVien = tk;
+                    Const.tenNhanVien = "Super Admin";
+
+                    MessageBox.Show("Login successfuly", $"Hi! Administrator ");
+                    Const.isNQL = true;
+                  
+                    Const.isLogIn = true;
+                    this.Hide();
+                    Form1 form = new Form1();
+                    form.ShowDialog();
+                    this.Close();
+
+
+                }
+                else
+                {
                     string sql = "select * from NhanVien where MaNV='" + tk + "' and MatKhau='" + mk + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
@@ -46,11 +66,13 @@ namespace QuanLyBanHang
                         }
                         else
                         {
-                            MessageBox.Show("Login successfuly");
+                            MessageBox.Show("Login successfuly", "Hi! Amployee");
                         }
-                        Const.isLogIn = true;
+                        
                         Const.maNhanVien = tk;
                         Const.tenNhanVien = context.NhanViens.Find(tk).TenNV;
+                        
+                        Const.isLogIn = true;
                         this.Hide();
                         Form1 form = new Form1();
                         form.ShowDialog();
@@ -59,12 +81,8 @@ namespace QuanLyBanHang
                     else
                     {
                         MessageBox.Show("Login failed");
+                    }
                 }
-                //}
-                //catch (Exception)
-                //{
-                //    MessageBox.Show("Something wrong");
-                //}
             }
             }
         private void Login_Load(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace QuanLyBanHang.UserControls
     public partial class KhachHangUC : UserControl
     {
         private bool isInsert = false;
-
+        static Random random = new Random();
         QuanLyBanHangEntities context = new QuanLyBanHangEntities();
         private static KhachHangUC _instance;
         public static KhachHangUC Instance
@@ -35,10 +35,17 @@ namespace QuanLyBanHang.UserControls
             dgvKhachHang.DataSource = context.SelectKhachHang();
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
+            DisabledProperties();
         }
         private void KhachHangUC_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
         void DisabledProperties()
         {
@@ -49,7 +56,7 @@ namespace QuanLyBanHang.UserControls
         }
         void EnabledProperties()
         {
-            txtMaKH.Enabled = true;
+           // txtMaKH.Enabled = true;
             txtHoKH.Enabled = true;
             txtSoDT.Enabled = true;
             txtTenKH.Enabled = true;
@@ -77,14 +84,14 @@ namespace QuanLyBanHang.UserControls
             {
                 try
                 {
-                    var KhachHang = context.InsertKhachHang(txtMaKH.Text.Trim(), txtHoKH.Text, txtTenKH.Text, txtSoDT.Text);
+                    var KhachHang = context.InsertKhachHang(RandomString(5), txtHoKH.Text, txtTenKH.Text, txtSoDT.Text);
                     MessageBox.Show("Inserted");
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Something Wrong");
                 }
-                KhachHangUC_Load(sender, e);
+                LoadData();
             }
             else
             {
@@ -98,7 +105,7 @@ namespace QuanLyBanHang.UserControls
                 {
                     MessageBox.Show("Something Wrong");
                 }
-                KhachHangUC_Load(sender, e);
+                LoadData();
             }
         }
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -113,12 +120,12 @@ namespace QuanLyBanHang.UserControls
         {
             btnThem.BackColor = Color.White;
             btnSua.BackColor = Color.White;
-            btnThem.Enabled = true; 
-            KhachHangUC_Load(sender, e);
+            btnThem.Enabled = true;
+            LoadData();
         }
         private void btnReload_Click(object sender, EventArgs e)
         {
-            KhachHangUC_Load(sender, e);
+            LoadData();
         }
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {

@@ -40,6 +40,7 @@ namespace QuanLyBanHang.UserControls
         }
         void LoadData()
         {
+            dgvSanPham.Refresh();
             dgvSanPham.DataSource = context.DASHBOARDs.ToList();
             for (int i = 0; i < dgvSanPham.Columns.Count; i++)
             {
@@ -60,7 +61,7 @@ namespace QuanLyBanHang.UserControls
             tamtinh = 0;
             txtMaNV.Text = Const.maNhanVien;
             lbTenNhanVien.Text = Const.tenNhanVien;
-            lbCart.ResetText();
+            lbCart.Text = "0";
             lbTongTien.ResetText();
             context.DeleteTempSP();
             dgvLog.DataSource = context.SelectTemptSP();
@@ -120,7 +121,7 @@ namespace QuanLyBanHang.UserControls
                     var Update = context.updateUTempSP(Int32.Parse(txtMaSP.Text));
                     dgvLog.DataSource = context.SelectTemptSP();
                 }
-                if(lbCart.Text != "")
+               // if(lbCart.Text != "")
                 lbCart.Text = (Int32.Parse(lbCart.Text) + 1).ToString();
                 tamtinh += Int32.Parse(txtGiaBan.Text);
                 lbTongTien.Text = tamtinh.ToString();
@@ -157,7 +158,7 @@ namespace QuanLyBanHang.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadData();
+            DashBoard_Load(sender, e);
 
         }
 
@@ -179,6 +180,23 @@ namespace QuanLyBanHang.UserControls
         private void button5_Click(object sender, EventArgs e)
         {
             txtTenKhachHang.Text = Const.TenKhachHang;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            var find = from m in context.DASHBOARDs
+                       where m.Tên_Sản_Phẩm.Contains(txtTimKiem.Text)
+                       select m;
+            dgvSanPham.DataSource = find.ToList();
+            if(txtTimKiem.Text == "")
+            {
+                dgvSanPham.DataSource = context.DASHBOARDs.ToList();
+            }
+        }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

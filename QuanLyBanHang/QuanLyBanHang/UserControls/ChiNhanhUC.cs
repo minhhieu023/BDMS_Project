@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.UserControls;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -32,9 +33,16 @@ namespace QuanLyBanHang
             txtMaCN.Text = dgvChiNhanh.Rows[r].Cells[0].Value.ToString();
             txtTenCN.Text = dgvChiNhanh.Rows[r].Cells[1].Value.ToString();
           
-        }       
+        }
         private void ChiNhanhUC_Load(object sender, System.EventArgs e)
         {
+            if (Const.isNQL == false || Const.maNhanVien != "admin")
+            {
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+                btnLuu.Visible = false;
+            }
             var ChiNhanh = context.SelectChiNhanh();
             dgvChiNhanh.DataSource = ChiNhanh;
             DisabledProperties();

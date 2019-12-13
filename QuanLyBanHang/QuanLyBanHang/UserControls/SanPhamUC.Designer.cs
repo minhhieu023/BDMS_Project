@@ -383,7 +383,7 @@
             this.dgvSanPham.Location = new System.Drawing.Point(179, 383);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvSanPham.Size = new System.Drawing.Size(1252, 600);
+            this.dgvSanPham.Size = new System.Drawing.Size(1252, 606);
             this.dgvSanPham.TabIndex = 17;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PHIM_CellClick);
             // 

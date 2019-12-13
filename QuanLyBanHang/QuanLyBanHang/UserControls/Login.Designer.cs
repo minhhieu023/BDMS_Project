@@ -85,7 +85,7 @@
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(51, 28);
             this.btnShow.TabIndex = 6;
-            this.btnShow.Text = "Hiện";
+            this.btnShow.Text = "Ẩn";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 

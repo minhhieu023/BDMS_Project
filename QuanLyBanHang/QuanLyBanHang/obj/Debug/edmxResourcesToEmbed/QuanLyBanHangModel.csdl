@@ -111,16 +111,6 @@
     <NavigationProperty Name="DanhMuc" Relationship="Self.FK_SanPham_DanhMuc1" FromRole="SanPham" ToRole="DanhMuc" />
     <NavigationProperty Name="NhanHieu" Relationship="Self.FK_SanPham_NhanHieu" FromRole="SanPham" ToRole="NhanHieu" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TemptSP">
     <Key>
       <PropertyRef Name="ID" />
@@ -274,7 +264,6 @@
     <EntitySet Name="NhanHieux" EntityType="Self.NhanHieu" />
     <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TemptSPs" EntityType="Self.TemptSP" />
     <EntitySet Name="SanPhamStoreds" EntityType="Self.SanPhamStored" />
     <EntitySet Name="DASHBOARDs" EntityType="Self.DASHBOARD" />
